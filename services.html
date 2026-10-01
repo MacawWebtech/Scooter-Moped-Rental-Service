@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#14b8a6" />
+    <title>Rental Services | Ridey</title>
+    <meta
+      name="description"
+      content="Explore Ridey rental options for city days, commutes and weekend bike journeys, with pickup and rental guidance."
+    />
+    <link rel="stylesheet" href="assets/css/home-redesign.css" />
+    <link rel="stylesheet" href="assets/css/services-redesign.css" />
+    <script>
+      try {
+        document.documentElement.dataset.theme =
+          localStorage.getItem("ridey-theme") === "dark" ? "dark" : "light";
+        document.documentElement.dir =
+          localStorage.getItem("ridey-direction") || "ltr";
+      } catch (e) {}
+    </script>
+  <link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg"><link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png"><link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png"><link rel="manifest" href="assets/favicon/site.webmanifest"></head>
+  <body id="top">
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="header">
+      <div class="header-inner">
+        <a class="brand" href="index.html" aria-label="Ridey home"
+          ><span class="brand-mark" aria-hidden="true">r</span>ridey<span
+            class="brand-period"
+            >.</span
+          ></a
+        ><button
+          class="icon-btn menu"
+          aria-label="Open navigation"
+          aria-expanded="false"
+          aria-controls="navigation"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+        <nav id="navigation" aria-label="Main navigation">
+          <details class="nav-group">
+            <summary>Home</summary>
+            <div class="drop">
+              <a href="index.html">Home 1 · Classic</a
+              ><a href="home-2.html">Home 2 · Explore</a>
+            </div>
+          </details>
+          <a href="about-us.html">About Us</a><a href="fleet.html">Fleet</a
+          ><a href="pricing.html">Plans</a>
+          <details class="nav-group">
+            <summary>Explore</summary>
+            <div class="drop">
+              <a href="about-us.html">About Ridey</a
+              ><a href="services.html">Services</a
+              ><a href="coverage-area.html">Pickup locations</a
+              ><a href="safety-deposit.html">Safety & deposit</a
+              ><a href="gallery.html">Gallery</a
+              ><a href="blog.html">Ride journal</a>
+            </div>
+          </details>
+          <a href="contact.html">Contact Us</a
+          ><a href="customer-dashboard.html">Dashboard</a>
+        </nav>
+        <div class="header-tools">
+          <button
+            class="icon-btn theme"
+            aria-label="Switch to dark mode"
+            aria-pressed="false"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20 15A8 8 0 0 1 9 4a8 8 0 1 0 11 11Z" />
+            </svg></button
+          ><button
+            class="icon-btn direction"
+            aria-label="Switch to right-to-left layout"
+            aria-pressed="false"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 8h16m-4-4 4 4-4 4M20 16H4m4-4-4 4 4 4" />
+            </svg></button
+          ><a class="btn secondary login" href="login.html">Log in</a
+          ><a class="btn primary header-book" href="book-now.html"
+            >Book a ride</a
+          >
+        </div>
+      </div>
+    </header>
+    <main id="main" class="services-new">
+      <section class="wrap services-intro">
+        <nav class="services-breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a><span>/</span
+          ><span aria-current="page">Services</span>
+        </nav>
+        <div class="services-intro-copy">
+          <span class="eyebrow">RENTALS THAT FIT REAL LIFE</span>
+          <h1>A little more freedom.<br />A lot of ways to ride.</h1>
+          <p>
+            From a single city day to your everyday commute, find a rental
+            experience that follows your plans.
+          </p>
+          <a class="btn primary" href="#service-options"
+            >Explore rental services</a
+          >
+        </div>
+        <div class="services-panorama">
+          <img
+            src="assets/images/service banner.jpg"
+            alt="Real scooters lined up for city rental"
+            width="1200"
+            height="800"
+            fetchpriority="high"
+          /><span>CITY DAYS · WORKDAYS · WEEKENDS</span>
+        </div>
+      </section>
+      <section id="service-options" class="surface">
+        <div class="wrap section">
+          <div class="services-section-head">
+            <span class="eyebrow">01 / START WITH YOUR DAY</span>
+            <h2>What brings you to Ridey?</h2>
+          </div>
+          <div
+            class="service-switcher"
+            role="group"
+            aria-label="Choose a rental service"
+          >
+            <button data-service="city" aria-pressed="true">
+              <span>01</span>City day rentals</button
+            ><button data-service="commute" aria-pressed="false">
+              <span>02</span>Commuter rentals</button
+            ><button data-service="weekend" aria-pressed="false">
+              <span>03</span>Weekend bike rentals
+            </button>
+          </div>
+          <div class="service-stage">
+            <img
+              id="service-photo"
+              src="assets/images/OWN PACE.jpg"
+              alt="Scooters for a day in the city"
+              width="1200"
+              height="800"
+              loading="lazy"
+            />
+            <div class="service-description" aria-live="polite">
+              <span class="eyebrow" id="service-kicker"
+                >A DAY AT YOUR OWN PACE</span
+              >
+              <h3 id="service-title">Take the city one stop at a time.</h3>
+              <p id="service-copy">
+                A daily scooter rental for appointments, sightseeing and the
+                errands you want to fit into one day.
+              </p>
+              <dl>
+                <div>
+                  <dt>Best suited to</dt>
+                  <dd id="service-fit">Short local journeys</dd>
+                </div>
+                <div>
+                  <dt>Plan to compare</dt>
+                  <dd id="service-period">Daily rental</dd>
+                </div>
+              </dl>
+              <div class="service-stage-actions">
+                <a
+                  id="service-action"
+                  class="btn primary"
+                  href="fleet.html?category=scooters"
+                  >Explore city scooters</a
+                ><a
+                  id="service-details"
+                  class="text-link"
+                  href="service-details.html?service=city"
+                  >Service details</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="wrap section service-guidance">
+        <div>
+          <span class="eyebrow">02 / THE CHOICE IS PERSONAL</span>
+          <h2>Different plans.<br />Thoughtful guidance.</h2>
+          <p>
+            Choose the ride and rental period together. A useful comparison
+            starts with where you’re going, how often you’ll ride and what feels
+            comfortable.
+          </p>
+          <div class="guidance-questions">
+            <details open>
+              <summary>Visiting for a few days?</summary>
+              <p>
+                Compare a daily rental with a weekly plan. Check pickup
+                convenience, return timing and the total included distance.
+              </p>
+            </details>
+            <details>
+              <summary>Building a regular commute?</summary>
+              <p>
+                Compare weekly and monthly options, and ask about maintenance
+                arrangements and longer rental terms.
+              </p>
+            </details>
+            <details>
+              <summary>Planning a route beyond the city?</summary>
+              <p>
+                Ask about suitable bikes, route permissions, kilometre limits
+                and your riding experience before deciding.
+              </p>
+            </details>
+          </div>
+          <a class="btn secondary" href="pricing.html"
+            >Compare rental periods</a
+          >
+        </div>
+        <img
+          src="assets/images/ride and rental.jpg"
+          alt="A rider beside a scooter outdoors"
+          width="1200"
+          height="800"
+          loading="lazy"
+        />
+      </section>
+      <section class="services-support">
+        <div class="wrap support-content">
+          <div>
+            <span class="eyebrow">03 / MORE THAN A VEHICLE CHOICE</span>
+            <h2>Know what happens<br />before you go.</h2>
+          </div>
+          <div class="support-rows">
+            <article>
+              <h3>Pickup coordination</h3>
+              <p>
+                Confirm the exact address, collection time and who to contact at
+                the handover.
+              </p>
+              <a href="coverage-area.html">Plan your pickup</a>
+            </article>
+            <article>
+              <h3>Rental guidance</h3>
+              <p>
+                Understand the deposit, fuel policy, permitted area and agreed
+                return arrangements.
+              </p>
+              <a href="safety-deposit.html">Check the rental essentials</a>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="wrap section service-preparation">
+        <div class="services-section-head">
+          <span class="eyebrow">04 / READY FOR A USEFUL CONVERSATION</span>
+          <h2>Tell us the essentials.</h2>
+          <p>
+            Have these details ready when checking a service with the rental
+            team.
+          </p>
+        </div>
+        <ol>
+          <li>
+            <span>01</span>
+            <h3>Your city</h3>
+            <p>Where you want to collect and use the ride.</p>
+          </li>
+          <li>
+            <span>02</span>
+            <h3>Your dates</h3>
+            <p>The intended pickup and return times.</p>
+          </li>
+          <li>
+            <span>03</span>
+            <h3>Your vehicle</h3>
+            <p>Scooter or bike, suited to your licence and experience.</p>
+          </li>
+          <li>
+            <span>04</span>
+            <h3>Your route</h3>
+            <p>Local trips, commuting or a longer planned journey.</p>
+          </li>
+        </ol>
+      </section>
+      <section class="services-closing">
+        <div class="wrap services-closing-inner">
+          <div>
+            <span class="eyebrow">LET’S MATCH THE SERVICE TO THE DAY</span>
+            <h2>Your plans are<br />a good place to start.</h2>
+          </div>
+          <div>
+            <p>
+              Tell the team what you need, then compare the ride and rental
+              options.
+            </p>
+            <a class="btn black" href="contact.html">Discuss my rental</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="wrap footer-grid">
+        <div>
+          <a class="brand" href="index.html" aria-label="Ridey home"
+            ><span class="brand-mark" aria-hidden="true">r</span>ridey<span
+              class="brand-period"
+              >.</span
+            ></a
+          >
+          <p>Rent a ride.<br />Make the journey yours.</p>
+        </div>
+        <div>
+          <h3>Ride your way</h3>
+          <a href="fleet.html">Scooters & bikes</a
+          ><a href="pricing.html">Rental plans</a
+          ><a href="coverage-area.html">Pickup locations</a
+          ><a href="book-now.html">Book a ride</a>
+        </div>
+        <div>
+          <h3>Here to help</h3>
+          <a href="safety-deposit.html">Safety & deposit</a
+          ><a href="contact.html">Contact us</a
+          ><a href="about-us.html">About Ridey</a
+          ><a href="blog.html">Ride journal</a>
+        </div>
+        <div class="footer-note">
+          <span class="eyebrow">BEFORE YOU RIDE</span>
+          <p>
+            Bring your valid driving licence and ID. Review your rental terms,
+            deposit and kilometre allowance before booking.
+          </p>
+        </div>
+      </div>
+      <div class="wrap footer-bottom">
+        <span>© 2026 Ridey</span><a href="#top">Back to top</a>
+      </div>
+    </footer>
+    <script src="assets/js/home-redesign.js" defer></script>
+    <script src="assets/js/services-redesign.js" defer></script>
+  </body>
+</html>

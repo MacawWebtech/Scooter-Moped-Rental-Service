@@ -1,0 +1,307 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta content="#14b8a6" name="theme-color" />
+    <title>Booking Confirmation — Ridey</title>
+    <meta
+      content="Review your Ridey scooter rental confirmation, pickup details, return deadline, deposit and demo agreement."
+      name="description"
+    />
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="assets/css/booking-confirmation.css" rel="stylesheet" />
+    <link href="assets/css/theme.css" rel="stylesheet" />
+    <link href="assets/css/home-redesign.css" rel="stylesheet" />
+    <link href="assets/css/final-pages-redesign.css" rel="stylesheet" />
+    <script>
+      try {
+        document.documentElement.dataset.theme =
+          localStorage.getItem("ridey-theme") === "dark" ? "dark" : "light";
+        document.documentElement.dir =
+          localStorage.getItem("ridey-direction") || "ltr";
+      } catch (e) {}
+    </script>
+  <link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg"><link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png"><link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png"><link rel="manifest" href="assets/favicon/site.webmanifest"></head>
+  <body class="confirmation-page" id="top">
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="header">
+      <div class="header-inner">
+        <a aria-label="Ridey home" class="brand" href="index.html"
+          ><span aria-hidden="true" class="brand-mark">r</span>ridey<span
+            class="brand-period"
+            >.</span
+          ></a
+        ><button
+          aria-controls="navigation"
+          aria-expanded="false"
+          aria-label="Open navigation"
+          class="icon-btn menu"
+        >
+          <svg aria-hidden="true" viewbox="0 0 24 24">
+            <path d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+        <nav aria-label="Main navigation" id="navigation">
+          <details class="nav-group">
+            <summary>Home</summary>
+            <div class="drop">
+              <a href="index.html">Home 1 · Classic</a
+              ><a href="home-2.html">Home 2 · Explore</a>
+            </div>
+          </details>
+          <a href="about-us.html">About Us</a><a href="fleet.html">Fleet</a
+          ><a href="pricing.html">Plans</a>
+          <details class="nav-group">
+            <summary>Explore</summary>
+            <div class="drop">
+              <a href="about-us.html">About Ridey</a
+              ><a href="services.html">Services</a
+              ><a href="coverage-area.html">Pickup locations</a
+              ><a href="safety-deposit.html">Safety &amp; deposit</a
+              ><a href="gallery.html">Gallery</a
+              ><a href="blog.html">Ride journal</a>
+            </div>
+          </details>
+          <a href="contact.html">Contact Us</a
+          ><a href="customer-dashboard.html">Dashboard</a>
+        </nav>
+        <div class="header-tools">
+          <button
+            aria-label="Switch to dark mode"
+            aria-pressed="false"
+            class="icon-btn theme"
+          >
+            <svg aria-hidden="true" viewbox="0 0 24 24">
+              <path d="M20 15A8 8 0 0 1 9 4a8 8 0 1 0 11 11Z"></path>
+            </svg></button
+          ><button
+            aria-label="Switch to right-to-left layout"
+            aria-pressed="false"
+            class="icon-btn direction"
+          >
+            <svg aria-hidden="true" viewbox="0 0 24 24">
+              <path d="M4 8h16m-4-4 4 4-4 4M20 16H4m4-4-4 4 4 4"></path>
+            </svg></button
+          ><a class="btn secondary login" href="login.html">Log in</a
+          ><a class="btn primary header-book" href="book-now.html"
+            >Book a ride</a
+          >
+        </div>
+      </div>
+    </header>
+    <main id="main">
+      <section class="confirm-hero">
+        <div class="confirm-copy reveal">
+          <small>BOOKING PREVIEW / READY FOR PICKUP</small>
+          <h1>Your ride<br /><em>has a route.</em></h1>
+          <p>
+            This static template shows how a successful rental confirmation can
+            look after a real booking/payment integration.
+          </p>
+          <a href="#receipt">Open ride receipt ↓</a>
+        </div>
+        <div aria-hidden="true" class="hero-ticket">
+          <span>RIDEY / CONFIRMATION</span><strong>RY-260915-0842</strong>
+          <div class="scan-line"></div>
+          <b>✓</b><small>DEMO CONFIRMATION</small>
+        </div>
+        <div aria-hidden="true" class="hero-road"><i></i><b>⚡</b></div>
+      </section>
+      <section class="receipt-stage" id="receipt">
+        <div class="receipt-intro reveal">
+          <small>01 / RIDE RECEIPT</small>
+          <h2>Everything<br />you need to go.</h2>
+          <p>
+            A mobility receipt instead of another card grid: booking identity,
+            machine, pickup and deadline stay together in one scannable strip.
+          </p>
+        </div>
+        <article class="mobility-receipt">
+          <header>
+            <span>RIDEY CITY RENTAL</span><b id="bookingId">RY-260915-0842</b>
+          </header>
+          <div class="receipt-route">
+            <i></i><span>CENTRAL HUB</span><b>→</b><span>RETURN HUB</span
+            ><i></i>
+          </div>
+          <dl>
+            <div>
+              <dt>SCOOTER</dt>
+              <dd id="confirmModel">R1 Street</dd>
+            </div>
+            <div>
+              <dt>PICKUP</dt>
+              <dd id="confirmPickup">Central Hub · 09:00</dd>
+            </div>
+            <div>
+              <dt>DURATION</dt>
+              <dd id="confirmDuration">4 hours</dd>
+            </div>
+            <div>
+              <dt>RETURN BY</dt>
+              <dd id="confirmReturn">13:00</dd>
+            </div>
+          </dl>
+          <footer><span>STATUS</span><strong>READY TO VERIFY</strong></footer>
+        </article>
+      </section>
+      <section class="deadline-stage">
+        <div aria-hidden="true" class="deadline-orbit">
+          <div class="orbit-ring">
+            <i></i><b>04:00</b><span>RIDE WINDOW</span>
+          </div>
+        </div>
+        <div class="deadline-copy reveal">
+          <small>02 / RETURN DEADLINE</small>
+          <h2>The clock rides<br />with you.</h2>
+          <p>
+            Your return deadline stays impossible to miss. A real integration
+            can turn this display into a live rental countdown.
+          </p>
+          <div class="deadline-line">
+            <span>Pickup</span><i></i><strong>09:00</strong><i></i
+            ><span>Return</span><strong>13:00</strong>
+          </div>
+        </div>
+      </section>
+      <section class="payment-strip">
+        <div class="payment-copy reveal">
+          <small>03 / PAYMENT SUMMARY</small>
+          <h2>One clear total.<br />No visual noise.</h2>
+        </div>
+        <div class="amount-track">
+          <div><small>RENTAL</small><strong>₹396</strong></div>
+          <i>＋</i>
+          <div><small>ADD-ONS</small><strong>₹0</strong></div>
+          <i>＋</i>
+          <div><small>REFUNDABLE DEPOSIT</small><strong>₹2,000</strong></div>
+          <i>＝</i>
+          <div class="amount-total">
+            <small>DEMO DUE</small><strong>₹2,396</strong>
+          </div>
+        </div>
+        <p>*No payment has been processed by this static HTML template.</p>
+      </section>
+      <section class="pickup-sequence">
+        <div class="sequence-head reveal">
+          <small>04 / PICKUP SEQUENCE</small>
+          <h2>Three moments.<br />Then ride.</h2>
+        </div>
+        <div aria-hidden="true" class="sequence-road">
+          <span></span><b class="moving-scooter">⚡</b>
+        </div>
+        <ol>
+          <li>
+            <b>01</b><strong>Show booking ID</strong
+            ><span>Present your confirmation at the selected hub.</span>
+          </li>
+          <li>
+            <b>02</b><strong>Verify rider ID</strong
+            ><span>Match the rider details and rental agreement.</span>
+          </li>
+          <li>
+            <b>03</b><strong>Inspect &amp; unlock</strong
+            ><span>Complete the handover check and begin the rental.</span>
+          </li>
+        </ol>
+      </section>
+      <section class="agreement-stage">
+        <div class="agreement-paper reveal">
+          <header><b>RIDEY</b><span>RENTAL AGREEMENT / DEMO</span></header>
+          <div class="paper-lines"><i></i><i></i><i></i><i></i><i></i></div>
+          <footer><span>RIDER SIGNATURE</span><span>HUB CHECK</span></footer>
+        </div>
+        <div class="agreement-copy reveal">
+          <small>05 / AGREEMENT</small>
+          <h2>Keep the terms<br />with the ride.</h2>
+          <p>
+            The production version can generate a real PDF rental agreement
+            after booking. This template includes the download interaction as a
+            front-end placeholder.
+          </p>
+          <button id="agreementBtn" type="button">
+            Download demo agreement ↓</button
+          ><small id="agreementStatus" role="status"></small>
+        </div>
+      </section>
+      <section class="calendar-stage">
+        <div class="calendar-copy reveal">
+          <small>06 / SAVE THE RIDE</small>
+          <h2>Put pickup and<br />return on your day.</h2>
+          <p>
+            Use the confirmation to create a calendar reminder for pickup and
+            the return deadline.
+          </p>
+          <button id="calendarBtn" type="button">
+            Add demo ride to calendar ＋</button
+          ><small id="calendarStatus" role="status"></small>
+        </div>
+        <div aria-hidden="true" class="calendar-visual">
+          <span>SEP</span><strong>15</strong>
+          <div><i></i><b>09:00 PICKUP</b></div>
+          <div><i></i><b>13:00 RETURN</b></div>
+        </div>
+      </section>
+      <section class="confirmation-cta">
+        <div aria-hidden="true" class="cta-route">
+          <svg viewbox="0 0 900 200">
+            <path d="M0 135 C190 20 310 190 470 90 S710 30 900 110"></path></svg ><b>⚡</b>
+        </div>
+        <div class="confirmation-cta-copy reveal">
+          <small>07 / WHAT'S NEXT</small>
+          <h2>Your booking is clear.<br /><em>Manage the ride next.</em></h2>
+          <p>
+            Review another scooter or return to your booking while the customer
+            dashboard is being added to this template.
+          </p>
+          <div>
+            <a class="primary-action" href="book-now.html"
+              >Edit this booking →</a
+            ><a href="fleet.html">Explore another scooter</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="wrap footer-grid">
+        <div>
+          <a aria-label="Ridey home" class="brand" href="index.html"
+            ><span aria-hidden="true" class="brand-mark">r</span>ridey<span
+              class="brand-period"
+              >.</span
+            ></a
+          >
+          <p>Rent a ride.<br />Make the journey yours.</p>
+        </div>
+        <div>
+          <h3>Ride your way</h3>
+          <a href="fleet.html">Scooters &amp; bikes</a
+          ><a href="pricing.html">Rental plans</a
+          ><a href="coverage-area.html">Pickup locations</a
+          ><a href="book-now.html">Book a ride</a>
+        </div>
+        <div>
+          <h3>Here to help</h3>
+          <a href="safety-deposit.html">Safety &amp; deposit</a
+          ><a href="contact.html">Contact us</a
+          ><a href="about-us.html">About Ridey</a
+          ><a href="blog.html">Ride journal</a>
+        </div>
+        <div class="footer-note">
+          <span class="eyebrow">BEFORE YOU RIDE</span>
+          <p>
+            Bring your valid driving licence and ID. Review your rental terms,
+            deposit and kilometre allowance before booking.
+          </p>
+        </div>
+      </div>
+      <div class="wrap footer-bottom">
+        <span>© 2026 Ridey</span><a href="#top">Back to top</a>
+      </div>
+    </footer>
+    <script defer="" src="assets/js/booking-confirmation.js"></script>
+    <script defer="" src="assets/js/home-redesign.js"></script>
+  </body>
+</html>

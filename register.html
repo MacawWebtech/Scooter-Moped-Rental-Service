@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en" data-theme="light" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#14b8a6" />
+    <title>Create account | Ridey</title>
+    <meta
+      name="description"
+      content="Create a Ridey rider account for faster booking and simple trip access."
+    />
+    <link rel="stylesheet" href="assets/css/home-redesign.css" />
+    <link rel="stylesheet" href="assets/css/register-redesign.css" />
+    <script>
+      try {
+        document.documentElement.dataset.theme =
+          localStorage.getItem("ridey-theme") === "dark" ? "dark" : "light";
+        document.documentElement.dir =
+          localStorage.getItem("ridey-direction") || "ltr";
+      } catch (e) {}
+    </script>
+  <link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg"><link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png"><link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png"><link rel="manifest" href="assets/favicon/site.webmanifest"></head>
+  <body id="top">
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="header">
+      <div class="header-inner">
+        <a class="brand" href="index.html" aria-label="Ridey home"
+          ><span class="brand-mark" aria-hidden="true">r</span>ridey<span
+            class="brand-period"
+            >.</span
+          ></a
+        ><button
+          class="icon-btn menu"
+          aria-label="Open navigation"
+          aria-expanded="false"
+          aria-controls="navigation"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+        <nav id="navigation" aria-label="Main navigation">
+          <details class="nav-group">
+            <summary>Home</summary>
+            <div class="drop">
+              <a href="index.html">Home 1 · Classic</a
+              ><a href="home-2.html">Home 2 · Explore</a>
+            </div>
+          </details>
+          <a href="about-us.html">About Us</a><a href="fleet.html">Fleet</a
+          ><a href="pricing.html">Plans</a>
+          <details class="nav-group">
+            <summary>Explore</summary>
+            <div class="drop">
+              <a href="about-us.html">About Ridey</a
+              ><a href="services.html">Services</a
+              ><a href="coverage-area.html">Pickup locations</a
+              ><a href="safety-deposit.html">Safety & deposit</a
+              ><a href="gallery.html">Gallery</a
+              ><a href="blog.html">Ride journal</a>
+            </div>
+          </details>
+          <a href="contact.html">Contact Us</a
+          ><a href="customer-dashboard.html">Dashboard</a>
+        </nav>
+        <div class="header-tools">
+          <button
+            class="icon-btn theme"
+            aria-label="Switch to dark mode"
+            aria-pressed="false"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20 15A8 8 0 0 1 9 4a8 8 0 1 0 11 11Z" />
+            </svg></button
+          ><button
+            class="icon-btn direction"
+            aria-label="Switch to right-to-left layout"
+            aria-pressed="false"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 8h16m-4-4 4 4-4 4M20 16H4m4-4-4 4 4 4" />
+            </svg></button
+          ><a class="btn secondary login" href="login.html">Log in</a
+          ><a class="btn primary header-book" href="book-now.html"
+            >Book a ride</a
+          >
+        </div>
+      </div>
+    </header>
+    <main id="main" class="register-new">
+      <section class="register-stage">
+        <div class="wrap register-grid">
+          <div class="register-intro">
+            <nav class="register-breadcrumb">
+              <a href="index.html">Home</a><span>/</span
+              ><span>Create account</span>
+            </nav>
+            <span class="eyebrow">01 / RIDER ACCESS</span>
+            <h1>Your next ride<br />starts with <span>one account.</span></h1>
+            <p class="register-lead">
+              Set up your rider details once, then keep bookings, pickup
+              information and ride history together.
+            </p>
+            <div class="register-steps">
+              <article>
+                <b>01</b>
+                <div>
+                  <h3>Create access</h3>
+                  <p>Add your basic rider details.</p>
+                </div>
+              </article>
+              <article>
+                <b>02</b>
+                <div>
+                  <h3>Keep trips together</h3>
+                  <p>See bookings and pickup information in one place.</p>
+                </div>
+              </article>
+              <article>
+                <b>03</b>
+                <div>
+                  <h3>Ride when ready</h3>
+                  <p>Move straight from your account to booking.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="register-workspace">
+            <figure class="register-image">
+              <img
+                src="assets/images/register-rider.jpg"
+                alt="Ridey rider with a city scooter"
+              />
+              <figcaption>
+                <span>RIDER ACCESS / CITY READY</span>
+              </figcaption>
+            </figure>
+            <form class="register-form-new" id="registerForm">
+              <div class="register-form-head">
+                <span class="eyebrow">02 / CREATE ACCOUNT</span>
+                <h2>Rider details.</h2>
+                <p>
+                  Use the information you want connected to your Ridey account.
+                </p>
+              </div>
+              <div class="register-fields">
+                <label class="full"
+                  >Full name<input
+                    type="text"
+                    name="name"
+                    required
+                    placeholder="Your full name"
+                    autocomplete="name" /></label
+                ><label
+                  >Email<input
+                    type="email"
+                    name="email"
+                    required
+                    placeholder="you@example.com"
+                    autocomplete="email" /></label
+                ><label
+                  >Phone<input
+                    type="tel"
+                    name="phone"
+                    required
+                    placeholder="Your phone number"
+                    autocomplete="tel" /></label
+                ><label class="full"
+                  >Password
+                  <div class="register-password">
+                    <input
+                      id="registerPassword"
+                      type="password"
+                      name="password"
+                      required
+                      placeholder="Create password"
+                      autocomplete="new-password"
+                    /><button
+                      type="button"
+                      class="register-password-toggle"
+                      aria-label="Show password"
+                    >
+                      Show
+                    </button>
+                  </div></label
+                >
+              </div>
+              <label class="register-agree"
+                ><input type="checkbox" required />
+                <span>I agree to the demo rental terms.</span></label
+              ><button class="register-submit" type="submit">
+                Create rider account
+              </button>
+              <div class="register-login-link">
+                <span>Already registered?</span
+                ><a href="login.html">Log in →</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="register-ready">
+        <div class="wrap register-ready-grid">
+          <div>
+            <span class="eyebrow">03 / WHAT YOU NEED</span>
+            <h2>Simple details.<br />No extra noise.</h2>
+          </div>
+          <div class="register-ready-list">
+            <article>
+              <span>01</span>
+              <h3>Valid contact</h3>
+              <p>Use an email and phone number you can access.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>Booking ID later</h3>
+              <p>Your rider account keeps future trip details connected.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>Licence at pickup</h3>
+              <p>Bring the required licence and ID when collecting a ride.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="wrap footer-grid">
+        <div>
+          <a class="brand" href="index.html"
+            ><span class="brand-mark">r</span>ridey<span class="brand-period"
+              >.</span
+            ></a
+          >
+          <p>Rent a ride.<br />Make the journey yours.</p>
+        </div>
+        <div>
+          <h3>Ride your way</h3>
+          <a href="fleet.html">Scooters & bikes</a
+          ><a href="pricing.html">Rental plans</a
+          ><a href="coverage-area.html">Pickup locations</a
+          ><a href="book-now.html">Book a ride</a>
+        </div>
+        <div>
+          <h3>Here to help</h3>
+          <a href="safety-deposit.html">Safety & deposit</a
+          ><a href="contact.html">Contact us</a
+          ><a href="about-us.html">About Ridey</a
+          ><a href="blog.html">Ride journal</a>
+        </div>
+        <div class="footer-note">
+          <span class="eyebrow">BEFORE YOU RIDE</span>
+          <p>
+            Bring your valid driving licence and ID. Review your rental terms,
+            deposit and kilometre allowance before booking.
+          </p>
+        </div>
+      </div>
+      <div class="wrap footer-bottom">
+        <span>© 2026 Ridey</span><a href="#top">Back to top</a>
+      </div>
+    </footer>
+    <script src="assets/js/home-redesign.js" defer></script>
+    <script src="assets/js/remaining.js" defer></script>
+    <script src="assets/js/register-redesign.js" defer></script>
+  </body>
+</html>

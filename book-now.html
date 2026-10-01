@@ -1,0 +1,406 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <meta content="#14b8a6" name="theme-color" />
+    <title>Book a Scooter — Ridey</title>
+    <meta
+      content="Build a Ridey scooter rental booking by choosing a pickup hub, scooter, date, duration, add-ons and rider details."
+      name="description"
+    />
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="assets/css/book-now.css" rel="stylesheet" />
+    <link href="assets/css/theme.css" rel="stylesheet" />
+    <link href="assets/css/home-redesign.css" rel="stylesheet" />
+    <link href="assets/css/final-pages-redesign.css" rel="stylesheet" />
+    <script>
+      try {
+        document.documentElement.dataset.theme =
+          localStorage.getItem("ridey-theme") === "dark" ? "dark" : "light";
+        document.documentElement.dir =
+          localStorage.getItem("ridey-direction") || "ltr";
+      } catch (e) {}
+    </script>
+  <link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg"><link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png"><link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png"><link rel="manifest" href="assets/favicon/site.webmanifest"></head>
+  <body class="booking-page" id="top">
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="header">
+      <div class="header-inner">
+        <a aria-label="Ridey home" class="brand" href="index.html"
+          ><span aria-hidden="true" class="brand-mark">r</span>ridey<span
+            class="brand-period"
+            >.</span
+          ></a
+        ><button
+          aria-controls="navigation"
+          aria-expanded="false"
+          aria-label="Open navigation"
+          class="icon-btn menu"
+        >
+          <svg aria-hidden="true" viewbox="0 0 24 24">
+            <path d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+        <nav aria-label="Main navigation" id="navigation">
+          <details class="nav-group">
+            <summary>Home</summary>
+            <div class="drop">
+              <a href="index.html">Home 1 · Classic</a
+              ><a href="home-2.html">Home 2 · Explore</a>
+            </div>
+          </details>
+          <a href="about-us.html">About Us</a><a href="fleet.html">Fleet</a
+          ><a href="pricing.html">Plans</a>
+          <details class="nav-group">
+            <summary>Explore</summary>
+            <div class="drop">
+              <a href="about-us.html">About Ridey</a
+              ><a href="services.html">Services</a
+              ><a href="coverage-area.html">Pickup locations</a
+              ><a href="safety-deposit.html">Safety &amp; deposit</a
+              ><a href="gallery.html">Gallery</a
+              ><a href="blog.html">Ride journal</a>
+            </div>
+          </details>
+          <a href="contact.html">Contact Us</a
+          ><a href="customer-dashboard.html">Dashboard</a>
+        </nav>
+        <div class="header-tools">
+          <button
+            aria-label="Switch to dark mode"
+            aria-pressed="false"
+            class="icon-btn theme"
+          >
+            <svg aria-hidden="true" viewbox="0 0 24 24">
+              <path d="M20 15A8 8 0 0 1 9 4a8 8 0 1 0 11 11Z"></path>
+            </svg></button
+          ><button
+            aria-label="Switch to right-to-left layout"
+            aria-pressed="false"
+            class="icon-btn direction"
+          >
+            <svg aria-hidden="true" viewbox="0 0 24 24">
+              <path d="M4 8h16m-4-4 4 4-4 4M20 16H4m4-4-4 4 4 4"></path>
+            </svg></button
+          ><a class="btn secondary login" href="login.html">Log in</a
+          ><a class="btn primary header-book" href="book-now.html"
+            >Book a ride</a
+          >
+        </div>
+      </div>
+    </header>
+    <main id="main">
+      <section class="book-hero">
+        <div class="hero-copy reveal">
+          <small>BOOK YOUR RIDE / 8 SIMPLE STEPS</small>
+          <h1>From here<br /><em>to anywhere.</em></h1>
+          <p>
+            Build your rental in one smooth journey. Choose the hub, machine and
+            time; we’ll keep the running estimate visible all the way.
+          </p>
+          <a href="#location">Start with pickup →</a>
+        </div>
+        <div aria-hidden="true" class="hero-route">
+          <svg viewbox="0 0 700 420">
+            <path
+              class="route-shadow"
+              d="M20 350 C150 190 220 380 350 220 S560 80 680 145"
+            ></path>
+            <path
+              class="route-live"
+              d="M20 350 C150 190 220 380 350 220 S560 80 680 145"
+            ></path></svg><i class="route-dot d1"></i><i class="route-dot d2"></i
+          ><i class="route-dot d3"></i>
+          <div class="ride-marker">⚡</div>
+          <span>YOUR BOOKING<br />TAKES SHAPE</span>
+        </div>
+        <div aria-label="Booking steps" class="step-rail">
+          <b class="active">01</b><b>02</b><b>03</b><b>04</b><b>05</b><b>06</b
+          ><b>07</b><b>08</b>
+        </div>
+      </section>
+      <section class="location-stage" id="location">
+        <div class="section-copy reveal">
+          <small>01 / SELECT LOCATION</small>
+          <h2>Where should<br />the ride begin?</h2>
+          <p>
+            Choose a demo pickup hub. The route map responds as you move between
+            city zones.
+          </p>
+          <label
+            >Pickup hub<select id="pickup">
+              <option value="Central Hub">Central Hub</option>
+              <option value="Metro Gate">Metro Gate</option>
+              <option value="Tech Park">Tech Park</option>
+              <option value="Riverside">Riverside</option>
+            </select></label
+          >
+        </div>
+        <div aria-label="Demo pickup map" class="booking-map">
+          <div class="map-grid"></div>
+          <svg aria-hidden="true" viewbox="0 0 620 390">
+            <path
+              d="M30 320 C130 250 160 100 285 180 S430 330 590 90"
+            ></path></svg><button class="hub h1 active" data-hub="Central Hub">
+            <i></i><span>CENTRAL</span></button
+          ><button class="hub h2" data-hub="Metro Gate">
+            <i></i><span>METRO</span></button
+          ><button class="hub h3" data-hub="Tech Park">
+            <i></i><span>TECH PARK</span></button
+          ><button class="hub h4" data-hub="Riverside">
+            <i></i><span>RIVERSIDE</span>
+          </button>
+          <div class="map-status">
+            <small>PICKUP READY</small><strong id="hubRead">Central Hub</strong>
+          </div>
+        </div>
+      </section>
+      <section class="scooter-runway" id="scooter">
+        <div class="runway-head reveal">
+          <small>02 / SELECT SCOOTER</small>
+          <h2>Pick your machine.</h2>
+          <p>
+            No generic product grid — move across the fleet runway and choose
+            the ride that fits your day.
+          </p>
+        </div>
+        <div class="runway">
+          <button class="machine active" data-model="R1 Street" data-rate="99">
+            <span>01</span>
+            <div class="scooter-art"><i></i><i></i><b></b></div>
+            <strong>R1 Street</strong><small>45 km/h · 65 km range</small
+            ><em>₹99/hr</em></button
+          ><button class="machine" data-model="E2 Volt" data-rate="119">
+            <span>02</span>
+            <div class="scooter-art"><i></i><i></i><b></b></div>
+            <strong>E2 Volt</strong><small>50 km/h · 82 km range</small
+            ><em>₹119/hr</em></button
+          ><button class="machine" data-model="GT Max" data-rate="149">
+            <span>03</span>
+            <div class="scooter-art"><i></i><i></i><b></b></div>
+            <strong>GT Max</strong><small>60 km/h · 110 km range</small
+            ><em>₹149/hr</em>
+          </button>
+        </div>
+        <div class="runway-read">
+          <small>SELECTED</small><strong id="modelRead">R1 Street</strong
+          ><span id="rateRead">₹99 / hour</span>
+        </div>
+      </section>
+      <section class="time-lab" id="time">
+        <div aria-hidden="true" class="clock-visual">
+          <div class="clock-ring">
+            <i id="clockNeedle"></i><b>R</b><span>TIME</span>
+          </div>
+        </div>
+        <div class="time-copy reveal">
+          <small>03 + 04 / PICKUP &amp; DURATION</small>
+          <h2>Set the clock.<br />Keep the freedom.</h2>
+          <div class="time-fields">
+            <label
+              >Pickup date<input id="rideDate" required="" type="date" /></label
+            ><label
+              >Pickup time<input
+                id="rideTime"
+                required=""
+                type="time"
+                value="09:00"
+            /></label>
+          </div>
+          <label class="duration-label"
+            >Rental duration <strong><b id="durationRead">4</b> hours</strong
+            ><input id="duration" max="24" min="1" type="range" value="4"
+          /></label>
+          <div class="return-read">
+            <small>ESTIMATED RETURN</small
+            ><strong id="returnRead">Same day · 13:00</strong>
+          </div>
+        </div>
+      </section>
+      <section class="addon-belt" id="addons">
+        <div class="belt-head reveal">
+          <small>05 / ADD-ONS</small>
+          <h2>Take what<br />the ride needs.</h2>
+          <p>
+            Tap an add-on to place it on your ride. Your total updates
+            instantly.
+          </p>
+        </div>
+        <div class="belt-track">
+          <label class="addon"
+            ><input type="checkbox" value="49" /><i>＋</i
+            ><strong>Extra Helmet</strong><span>₹49</span></label
+          ><label class="addon"
+            ><input type="checkbox" value="79" /><i>＋</i
+            ><strong>Phone Mount</strong><span>₹79</span></label
+          ><label class="addon"
+            ><input type="checkbox" value="99" /><i>＋</i
+            ><strong>Doorstep Return</strong><span>₹99</span></label
+          ><label class="addon"
+            ><input type="checkbox" value="129" /><i>＋</i
+            ><strong>Rain Kit</strong><span>₹129</span></label
+          >
+        </div>
+        <div aria-hidden="true" class="belt-line"><i></i></div>
+      </section>
+      <section class="rider-check" id="rider">
+        <div aria-hidden="true" class="identity-visual">
+          <div class="id-outline">
+            <span>RIDEY / RIDER</span><b>✓</b><i></i
+            ><small>VERIFY BEFORE RIDE</small>
+          </div>
+        </div>
+        <form class="rider-form" id="bookingForm" novalidate="">
+          <small>06 + 07 / DEPOSIT &amp; RIDER DETAILS</small>
+          <h2>One rider.<br />One quick check.</h2>
+          <div class="deposit-line">
+            <span>Refundable demo deposit</span
+            ><strong id="depositRead">₹2,000</strong>
+          </div>
+          <div class="form-line">
+            <label
+              >Full name<input
+                autocomplete="name"
+                id="fullName"
+                placeholder="Your name"
+                required=""
+                type="text"
+              /><em>Please enter your name.</em></label
+            ><label
+              >Email<input
+                autocomplete="email"
+                id="email"
+                placeholder="you@example.com"
+                required=""
+                type="email"
+              /><em>Enter a valid email.</em></label
+            >
+          </div>
+          <div class="form-line">
+            <label
+              >Phone<input
+                autocomplete="tel"
+                id="phone"
+                pattern="[0-9]{10}"
+                placeholder="10-digit number"
+                required=""
+                type="tel"
+              /><em>Enter a 10-digit phone number.</em></label
+            ><label
+              >ID type<select id="idType" required="">
+                <option value="">Choose ID</option>
+                <option>Driving Licence</option>
+                <option>Passport</option>
+                <option>Government ID</option></select
+              ><em>Select an ID type.</em></label
+            >
+          </div>
+          <label class="agree"
+            ><input id="terms" required="" type="checkbox" /> I understand this
+            is a front-end booking demo and final rental/payment requires real
+            service integration.</label
+          >
+        </form>
+      </section>
+      <section class="review-ticket" id="review">
+        <div class="review-copy reveal">
+          <small>08 / REVIEW BOOKING</small>
+          <h2>Everything in<br />one ride ticket.</h2>
+          <p>
+            Check the route, scooter, time and estimated amount before moving
+            forward.
+          </p>
+          <div class="review-actions">
+            <button id="reviewBtn" type="button">Validate &amp; review →</button
+            ><a href="pricing.html">Check pricing again</a>
+          </div>
+          <p class="form-message" id="formMessage" role="status"></p>
+        </div>
+        <div aria-live="polite" class="ticket">
+          <div class="ticket-top"><b>RIDEY</b><span>BOOKING PREVIEW</span></div>
+          <dl>
+            <div>
+              <dt>PICKUP</dt>
+              <dd id="ticketHub">Central Hub</dd>
+            </div>
+            <div>
+              <dt>SCOOTER</dt>
+              <dd id="ticketModel">R1 Street</dd>
+            </div>
+            <div>
+              <dt>DURATION</dt>
+              <dd><span id="ticketDuration">4</span> hours</dd>
+            </div>
+            <div>
+              <dt>RENTAL</dt>
+              <dd id="rentalTotal">₹396</dd>
+            </div>
+            <div>
+              <dt>ADD-ONS</dt>
+              <dd id="addonTotal">₹0</dd>
+            </div>
+            <div>
+              <dt>DEPOSIT</dt>
+              <dd id="ticketDeposit">₹2,000</dd>
+            </div>
+          </dl>
+          <div class="ticket-total">
+            <span>ESTIMATED DUE*</span><strong id="grandTotal">₹2,396</strong>
+          </div>
+          <small
+            >*Demo estimate. Taxes/payment are not processed on this static
+            template.</small
+          ><a
+            aria-disabled="true"
+            class="disabled"
+            href="booking-confirmation.html"
+            id="continueBtn"
+            >Continue to confirmation preview →</a
+          >
+        </div>
+        <div aria-hidden="true" class="review-road"><i></i><b>⚡</b></div>
+      </section>
+    </main>
+    <footer>
+      <div class="wrap footer-grid">
+        <div>
+          <a aria-label="Ridey home" class="brand" href="index.html"
+            ><span aria-hidden="true" class="brand-mark">r</span>ridey<span
+              class="brand-period"
+              >.</span
+            ></a
+          >
+          <p>Rent a ride.<br />Make the journey yours.</p>
+        </div>
+        <div>
+          <h3>Ride your way</h3>
+          <a href="fleet.html">Scooters &amp; bikes</a
+          ><a href="pricing.html">Rental plans</a
+          ><a href="coverage-area.html">Pickup locations</a
+          ><a href="book-now.html">Book a ride</a>
+        </div>
+        <div>
+          <h3>Here to help</h3>
+          <a href="safety-deposit.html">Safety &amp; deposit</a
+          ><a href="contact.html">Contact us</a
+          ><a href="about-us.html">About Ridey</a
+          ><a href="blog.html">Ride journal</a>
+        </div>
+        <div class="footer-note">
+          <span class="eyebrow">BEFORE YOU RIDE</span>
+          <p>
+            Bring your valid driving licence and ID. Review your rental terms,
+            deposit and kilometre allowance before booking.
+          </p>
+        </div>
+      </div>
+      <div class="wrap footer-bottom">
+        <span>© 2026 Ridey</span><a href="#top">Back to top</a>
+      </div>
+    </footer>
+    <script defer="" src="assets/js/book-now.js"></script>
+    <script defer="" src="assets/js/home-redesign.js"></script>
+  </body>
+</html>

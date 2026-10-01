@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Choose scooter and bike rentals for city trips, weekends and everyday commuting. Compare daily, weekly and monthly plans."
+    />
+    <meta name="theme-color" content="#14b8a6" />
+    <title>Ridey | Your Journey, Your Pace</title>
+    <link rel="stylesheet" href="assets/css/home-redesign.css" />
+    <link rel="stylesheet" href="assets/css/home2-redesign.css" />
+    <script>
+      try {
+        document.documentElement.dataset.theme =
+          localStorage.getItem("ridey-theme") === "dark" ? "dark" : "light";
+        document.documentElement.dir =
+          localStorage.getItem("ridey-direction") || "ltr";
+      } catch (e) {}
+    </script>
+  <link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg"><link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png"><link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png"><link rel="manifest" href="assets/favicon/site.webmanifest"></head>
+  <body id="top">
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="header">
+      <div class="header-inner">
+        <a class="brand" href="index.html" aria-label="Ridey home"
+          ><span class="brand-mark" aria-hidden="true">r</span>ridey<span
+            class="brand-period"
+            >.</span
+          ></a
+        ><button
+          class="icon-btn menu"
+          aria-label="Open navigation"
+          aria-expanded="false"
+          aria-controls="navigation"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+        <nav id="navigation" aria-label="Main navigation">
+          <details class="nav-group">
+            <summary>Home</summary>
+            <div class="drop">
+              <a href="index.html">Home 1 · Classic</a
+              ><a href="home-2.html">Home 2 · Explore</a>
+            </div>
+          </details>
+          <a href="about-us.html">About Us</a><a href="fleet.html">Fleet</a
+          ><a href="pricing.html">Plans</a>
+          <details class="nav-group">
+            <summary>Explore</summary>
+            <div class="drop">
+              <a href="about-us.html">About Ridey</a
+              ><a href="services.html">Services</a
+              ><a href="coverage-area.html">Pickup locations</a
+              ><a href="safety-deposit.html">Safety & deposit</a
+              ><a href="gallery.html">Gallery</a
+              ><a href="blog.html">Ride journal</a>
+            </div>
+          </details>
+          <a href="contact.html">Contact Us</a
+          ><a href="customer-dashboard.html">Dashboard</a>
+        </nav>
+        <div class="header-tools">
+          <button
+            class="icon-btn theme"
+            aria-label="Switch to dark mode"
+            aria-pressed="false"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20 15A8 8 0 0 1 9 4a8 8 0 1 0 11 11Z" />
+            </svg></button
+          ><button
+            class="icon-btn direction"
+            aria-label="Switch to right-to-left layout"
+            aria-pressed="false"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 8h16m-4-4 4 4-4 4M20 16H4m4-4-4 4 4 4" />
+            </svg></button
+          ><a class="btn secondary login" href="login.html">Log in</a
+          ><a class="btn primary header-book" href="book-now.html"
+            >Book a ride</a
+          >
+        </div>
+      </div>
+    </header>
+    <main id="main" class="home2">
+      <section class="h2-hero">
+        <img
+          src="assets/images/home2-hero-scooter-riders.jpg"
+          alt="Helmeted riders with scooters beside a scenic road"
+          fetchpriority="high"
+          width="1200"
+          height="800"
+        />
+        <div class="wrap h2-hero-inner">
+          <div class="h2-hero-copy">
+            <span class="eyebrow">A RIDE FOR THE WAY YOU LIVE</span>
+            <h1>Take the day<br />somewhere new.</h1>
+            <p>
+              A coffee run, a coastal detour, or a week of getting things done.
+              Start with your plans. We’ll help you choose the wheels.
+            </p>
+            <a class="btn primary" href="#ride-match">Match my ride</a>
+          </div>
+          <div class="h2-hero-caption">
+            <span>RENT A LITTLE FREEDOM</span
+            ><b>Two wheels.<br />Your own itinerary.</b>
+          </div>
+        </div>
+      </section>
+      <section id="ride-match" class="wrap h2-match">
+        <div>
+          <span class="eyebrow">FIRST, WHAT’S THE PLAN?</span>
+          <h2>Make the ride fit you.</h2>
+        </div>
+        <form action="fleet.html" method="get" class="h2-match-form">
+          <label
+            >Your journey<select name="journey">
+              <option value="city">Around the city</option>
+              <option value="weekend">A weekend away</option>
+              <option value="commute">The everyday commute</option>
+            </select></label
+          ><label
+            >Your wheels<select name="category">
+              <option value="scooters">Automatic scooter</option>
+              <option value="bikes">Geared bike</option>
+            </select></label
+          ><button class="btn primary" type="submit">Explore the fleet</button>
+        </form>
+      </section>
+      <section class="wrap section h2-editorial">
+        <div class="h2-section-title">
+          <span class="eyebrow">01 / TWO DIFFERENT WAYS TO GO</span>
+          <h2>Small streets.<br />Longer horizons.</h2>
+          <p>Choose by the journey, then compare the ride.</p>
+        </div>
+        <div class="h2-comparison">
+          <article class="h2-ride-panel">
+            <img
+              src="assets/images/home2-city-scooter.jpg"
+              alt="A helmeted scooter rider travelling through the city"
+              loading="lazy"
+              width="1200"
+              height="800"
+            />
+            <div class="h2-panel-copy">
+              <span class="eyebrow">THE CITY COMPANION</span>
+              <h3>Easy-going scooters.</h3>
+              <p>
+                Automatic riding for neighbourhood stops, workdays and short
+                city trips.
+              </p>
+              <dl>
+                <div>
+                  <dt>Best for</dt>
+                  <dd>Everyday errands</dd>
+                </div>
+                <div>
+                  <dt>Ride style</dt>
+                  <dd>Automatic & relaxed</dd>
+                </div>
+              </dl>
+              <a class="btn secondary" href="fleet.html?category=scooters"
+                >See city scooters</a
+              >
+            </div>
+          </article>
+          <article class="h2-ride-panel reverse">
+            <img
+              src="assets/images/home2-motorcycle-collection.jpg"
+              alt="Cruiser motorcycles parked in a row"
+              loading="lazy"
+              width="1200"
+              height="800"
+            />
+            <div class="h2-panel-copy">
+              <span class="eyebrow">THE WEEKEND COMPANION</span>
+              <h3>Bikes for a bigger day.</h3>
+              <p>
+                For confident geared riders planning a longer route and a few
+                extra stops.
+              </p>
+              <dl>
+                <div>
+                  <dt>Best for</dt>
+                  <dd>Weekend exploring</dd>
+                </div>
+                <div>
+                  <dt>Ride style</dt>
+                  <dd>Geared & engaging</dd>
+                </div>
+              </dl>
+              <a class="btn secondary" href="fleet.html?category=bikes"
+                >See rental bikes</a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+      <section id="rental-rhythm" class="h2-rhythm surface">
+        <div class="wrap section h2-rhythm-layout">
+          <div class="h2-rhythm-copy">
+            <span class="eyebrow">02 / RENT FOR YOUR ROUTINE</span>
+            <h2>How long is<br />your next chapter?</h2>
+            <p>
+              A short visit and a daily commute need different plans. Choose
+              your rhythm to find a starting point.
+            </p>
+            <div
+              class="h2-periods"
+              role="group"
+              aria-label="Choose a rental period"
+            >
+              <button data-period="daily" aria-pressed="true">A day</button
+              ><button data-period="weekly" aria-pressed="false">A week</button
+              ><button data-period="monthly" aria-pressed="false">
+                A month
+              </button>
+            </div>
+            <div class="h2-recommendation" aria-live="polite">
+              <span id="period-label" class="eyebrow"
+                >FOR A CHANGE OF SCENE</span
+              >
+              <h3 id="period-title">Keep your day open.</h3>
+              <p id="period-copy">
+                A daily rental suits sightseeing, appointments and a day of
+                exploring at your own pace.
+              </p>
+              <a
+                id="period-link"
+                class="btn primary"
+                href="pricing.html?plan=daily"
+                >Explore daily rentals</a
+              >
+            </div>
+            <a class="text-link" href="pricing.html"
+              >Compare all rates & allowances</a
+            >
+          </div>
+          <div class="h2-rhythm-image">
+            <img
+              src="assets/images/home2-rental-scooters.jpg"
+              alt="Riders standing beside three scooters outdoors"
+              loading="lazy"
+              width="1200"
+              height="800"
+            />
+            <div class="h2-image-note">
+              <b>One rental.<br />Many possibilities.</b
+              ><span
+                >Choose the period. Check the terms.<br />Make the time your
+                own.</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="wrap section h2-itinerary">
+        <div class="h2-section-title horizontal">
+          <div>
+            <span class="eyebrow">03 / LESS ROUTINE, MORE DISCOVERY</span>
+            <h2>Leave room for<br />an unplanned stop.</h2>
+          </div>
+          <p>
+            Build a day around the places you enjoy. Confirm the permitted
+            riding area before setting off.
+          </p>
+        </div>
+        <div class="h2-story-grid">
+          <article class="h2-story h2-story-wide">
+            <img
+              src="assets/images/home2-scenic-scooter-journey.jpg"
+              alt="A scooter rider on a misty scenic road"
+              loading="lazy"
+              width="1200"
+              height="800"
+            />
+            <div>
+              <span class="eyebrow">THE SLOW MORNING</span>
+              <h3>Breakfast. A quiet street.<br />One more turn.</h3>
+              <p>
+                Take a scooter for a relaxed city loop, with time to stop
+                wherever catches your eye.
+              </p>
+              <a class="btn secondary" href="book-now.html">Plan a city day</a>
+            </div>
+          </article>
+          <article class="h2-story">
+            <img
+              src="assets/images/home2-forest-motorcycle-ride.jpg"
+              alt="Helmeted motorcyclists riding along a forest road"
+              loading="lazy"
+              width="1200"
+              height="800"
+            />
+            <div>
+              <span class="eyebrow">THE LONGER LOOP</span>
+              <h3>Go beyond<br />your usual route.</h3>
+              <p>
+                Choose a suitable bike and check distance limits, outstation
+                permission and return time.
+              </p>
+              <a class="btn secondary" href="contact.html"
+                >Ask about longer rides</a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="h2-ready">
+        <div class="wrap section h2-ready-layout">
+          <div class="h2-ready-photo">
+            <img
+              src="assets/images/home2-scooter-pickup.jpg"
+              alt="Scooters with helmets parked at a pickup location"
+              loading="lazy"
+              width="1200"
+              height="800"
+            /><span class="h2-photo-label"
+              >A GOOD JOURNEY STARTS AT PICKUP</span
+            >
+          </div>
+          <div>
+            <span class="eyebrow">04 / THE DETAILS THAT MATTER</span>
+            <h2>A quick check.<br />A calmer ride.</h2>
+            <div class="h2-check-list">
+              <details open>
+                <summary>Your documents</summary>
+                <p>
+                  Have your valid driving licence and requested ID ready.
+                  Confirm rider eligibility before pickup.
+                </p>
+              </details>
+              <details>
+                <summary>Your vehicle</summary>
+                <p>
+                  Check brakes, tyres, lights and existing marks with the rental
+                  team. Confirm helmets before leaving.
+                </p>
+              </details>
+              <details>
+                <summary>Your rental terms</summary>
+                <p>
+                  Review the deposit, fuel policy, kilometre allowance,
+                  permitted area and agreed return time.
+                </p>
+              </details>
+            </div>
+            <a class="btn secondary" href="safety-deposit.html"
+              >Read the pickup checklist</a
+            >
+          </div>
+        </div>
+      </section>
+      <section class="h2-closing">
+        <div class="wrap h2-closing-inner">
+          <span class="eyebrow">MAKE SPACE FOR THE JOURNEY</span>
+          <h2>A full day ahead.<br />A ride of your own.</h2>
+          <p>Pick the wheels. Set the pace. See where the day takes you.</p>
+          <div class="h2-closing-actions">
+            <a class="btn black" href="book-now.html">Start planning my ride</a
+            ><a class="text-link" href="coverage-area.html"
+              >Find a pickup location</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="wrap footer-grid">
+        <div>
+          <a class="brand" href="index.html" aria-label="Ridey home"
+            ><span class="brand-mark" aria-hidden="true">r</span>ridey<span
+              class="brand-period"
+              >.</span
+            ></a
+          >
+          <p>Rent a ride.<br />Make the journey yours.</p>
+        </div>
+        <div>
+          <h3>Ride your way</h3>
+          <a href="fleet.html">Scooters & bikes</a
+          ><a href="pricing.html">Rental plans</a
+          ><a href="coverage-area.html">Pickup locations</a
+          ><a href="book-now.html">Book a ride</a>
+        </div>
+        <div>
+          <h3>Here to help</h3>
+          <a href="safety-deposit.html">Safety & deposit</a
+          ><a href="contact.html">Contact us</a
+          ><a href="about-us.html">About Ridey</a
+          ><a href="blog.html">Ride journal</a>
+        </div>
+        <div class="footer-note">
+          <span class="eyebrow">BEFORE YOU RIDE</span>
+          <p>
+            Bring your valid driving licence and ID. Review your rental terms,
+            deposit and kilometre allowance before booking.
+          </p>
+        </div>
+      </div>
+      <div class="wrap footer-bottom">
+        <span>© 2026 Ridey</span><a href="#top">Back to top</a>
+      </div>
+    </footer>
+    <script src="assets/js/home-redesign.js" defer></script>
+    <script src="assets/js/home2-redesign.js" defer></script>
+  </body>
+</html>

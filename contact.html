@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en" data-theme="light" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#14b8a6" />
+    <title>Contact Ridey | Rider Support</title>
+    <meta
+      name="description"
+      content="Contact Ridey rider support, find rental hubs and get help with a booking or return."
+    />
+    <link rel="stylesheet" href="assets/css/home-redesign.css" />
+    <link rel="stylesheet" href="assets/css/contact-redesign.css" />
+    <script>
+      try {
+        document.documentElement.dataset.theme =
+          localStorage.getItem("ridey-theme") === "dark" ? "dark" : "light";
+        document.documentElement.dir =
+          localStorage.getItem("ridey-direction") || "ltr";
+      } catch (e) {}
+    </script>
+  <link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg"><link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png"><link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png"><link rel="manifest" href="assets/favicon/site.webmanifest"><link rel="stylesheet" href="assets/css/qa-fixes.css" />
+</head>
+  <body id="top">
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="header">
+      <div class="header-inner">
+        <a class="brand" href="index.html" aria-label="Ridey home"
+          ><span class="brand-mark" aria-hidden="true">r</span>ridey<span
+            class="brand-period"
+            >.</span
+          ></a
+        ><button
+          class="icon-btn menu"
+          aria-label="Open navigation"
+          aria-expanded="false"
+          aria-controls="navigation"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+        <nav id="navigation" aria-label="Main navigation">
+          <details class="nav-group">
+            <summary>Home</summary>
+            <div class="drop">
+              <a href="index.html">Home 1 · Classic</a
+              ><a href="home-2.html">Home 2 · Explore</a>
+            </div>
+          </details>
+          <a href="about-us.html">About Us</a><a href="fleet.html">Fleet</a
+          ><a href="pricing.html">Plans</a>
+          <details class="nav-group">
+            <summary>Explore</summary>
+            <div class="drop">
+              <a href="about-us.html">About Ridey</a
+              ><a href="services.html">Services</a
+              ><a href="coverage-area.html">Pickup locations</a
+              ><a href="safety-deposit.html">Safety & deposit</a
+              ><a href="gallery.html">Gallery</a
+              ><a href="blog.html">Ride journal</a>
+            </div>
+          </details>
+          <a href="contact.html" aria-current="page">Contact Us</a
+          ><a href="customer-dashboard.html">Dashboard</a>
+        <a class="nav-login" href="login.html">Log in</a></nav>
+        <div class="header-tools">
+          <button
+            class="icon-btn theme"
+            aria-label="Switch to dark mode"
+            aria-pressed="false"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20 15A8 8 0 0 1 9 4a8 8 0 1 0 11 11Z" />
+            </svg></button
+          ><button
+            class="icon-btn direction"
+            aria-label="Switch to right-to-left layout"
+            aria-pressed="false"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 8h16m-4-4 4 4-4 4M20 16H4m4-4-4 4 4 4" />
+            </svg></button
+          ><a class="btn secondary login" href="login.html">Log in</a
+          ><a class="btn primary header-book" href="book-now.html"
+            >Book a ride</a
+          >
+        </div>
+      </div>
+    </header>
+    <main id="main" class="contact-new">
+      <section class="contact-hero">
+        <div class="wrap contact-hero-grid">
+          <div class="contact-hero-copy reveal">
+            <span class="eyebrow">RIDER SUPPORT / CONTACT</span>
+            <h1>One message.<br /><span>The right route.</span></h1>
+            <p>
+              Questions about pickup, returns, deposits or an active rental?
+              Start here and we’ll point you to the right Ridey support path.
+            </p>
+            <div class="contact-quick">
+              <a href="mailto:hello@ridey.example"
+                ><small>EMAIL</small><strong>hello@ridey.example</strong></a
+              ><a href="tel:+15550102468"
+                ><small>CALL</small><strong>+1 555 010 2468</strong></a
+              >
+            </div>
+          </div>
+          <figure class="contact-hero-photo reveal">
+            <img
+              src="assets/images/contact.jpg"
+              alt="Ridey support and rental pickup area"
+            />
+            <figcaption>
+              CONTACT IMAGE PATH<br /><b
+                >assets/images/contact-redesign/contact-hero.jpg</b
+              >
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+      <section class="contact-paths">
+        <div class="wrap">
+          <div class="contact-section-head">
+            <span class="eyebrow">01 / CHOOSE THE FASTEST PATH</span>
+            <h2>What do you need help with?</h2>
+          </div>
+          <div class="path-grid">
+            <a href="#message"
+              ><span>01</span>
+              <h3>Booking help</h3>
+              <p>Questions before or during checkout.</p>
+              <b>Send a message →</b></a
+            ><a href="coverage-area.html"
+              ><span>02</span>
+              <h3>Pickup & return</h3>
+              <p>Find active hubs and return points.</p>
+              <b>View coverage →</b></a
+            ><a href="safety-deposit.html"
+              ><span>03</span>
+              <h3>Deposit & safety</h3>
+              <p>Understand holds, checks and release.</p>
+              <b>Read the guide →</b></a
+            >
+          </div>
+        </div>
+      </section>
+      <section class="wrap contact-message" id="message">
+        <div class="message-copy reveal">
+          <span class="eyebrow">02 / SEND A MESSAGE</span>
+          <h2>Tell us where you are in the journey.</h2>
+          <p>
+            Give us the important details once. We’ll use them to route your
+            question to the right support flow.
+          </p>
+          <div class="message-note">
+            <b>For active rentals</b
+            ><span>Include your booking reference and pickup location.</span>
+          </div>
+        </div>
+        <form class="contact-form reveal">
+          <label
+            ><span>Name</span
+            ><input type="text" placeholder="Your name" required /></label
+          ><label
+            ><span>Email</span
+            ><input
+              type="email"
+              placeholder="you@example.com"
+              required /></label
+          ><label
+            ><span>Topic</span
+            ><select required>
+              <option value="">Choose a topic</option>
+              <option>Booking</option>
+              <option>Pickup / return</option>
+              <option>Deposit</option>
+              <option>Partnership</option>
+            </select></label
+          ><label class="full"
+            ><span>Message</span
+            ><textarea
+              rows="6"
+              placeholder="Tell us what you need help with"
+              required
+            ></textarea></label
+          ><button class="btn black full" type="submit">Send inquiry</button>
+        </form>
+      </section>
+      <section class="contact-hubs">
+        <div class="wrap hubs-grid">
+          <figure class="hub-photo reveal">
+            <img
+              src="assets/images/gallery banner.jpg"
+              alt="Ridey city rental hub"
+            />
+            <figcaption>
+              HUB IMAGE PATH / assets/images/contact-redesign/support-hub.jpg
+            </figcaption>
+          </figure>
+          <div class="hub-copy reveal">
+            <span class="eyebrow">03 / IN-PERSON SUPPORT</span>
+            <h2>Three hubs.<br />Same Ridey help.</h2>
+            <div class="hub-list">
+              <div>
+                <b>01</b
+                ><span
+                  ><strong>Central Station</strong
+                  ><small>06:00–23:00</small></span
+                >
+              </div>
+              <div>
+                <b>02</b
+                ><span
+                  ><strong>Tech Park</strong><small>07:00–22:00</small></span
+                >
+              </div>
+              <div>
+                <b>03</b
+                ><span
+                  ><strong>Riverside</strong><small>07:00–23:00</small></span
+                >
+              </div>
+            </div>
+            <a class="text-link" href="coverage-area.html"
+              >See pickup and return coverage</a
+            >
+          </div>
+        </div>
+      </section>
+      <section class="wrap contact-faq">
+        <div>
+          <span class="eyebrow">04 / QUICK ANSWERS</span>
+          <h2>Before you send.</h2>
+        </div>
+        <div>
+          <details>
+            <summary>Can I change my pickup hub?</summary>
+            <p>
+              Before confirmation, update the hub in the booking flow. For an
+              active booking, contact rider support.
+            </p>
+          </details>
+          <details>
+            <summary>Where can I see my deposit?</summary>
+            <p>
+              Your selected ride and booking summary show the refundable deposit
+              separately from the rental price.
+            </p>
+          </details>
+          <details>
+            <summary>How do I confirm the return point?</summary>
+            <p>
+              Open Coverage Area before pickup and verify the active return hub,
+              opening time and handover notes.
+            </p>
+          </details>
+        </div>
+      </section>
+      <section class="contact-cta">
+        <div class="wrap contact-cta-inner">
+          <div>
+            <span class="eyebrow">CONTACT / NEXT STEP</span>
+            <h2>Ready when you are.</h2>
+          </div>
+          <div>
+            <p>
+              Continue your booking or compare the rides available for your next
+              city trip.
+            </p>
+            <div>
+              <a class="btn black" href="book-now.html">Book a ride</a
+              ><a class="btn secondary" href="fleet.html">Browse fleet</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="wrap footer-grid">
+        <div>
+          <a class="brand" href="index.html"
+            ><span class="brand-mark">r</span>ridey<span class="brand-period"
+              >.</span
+            ></a
+          >
+          <p>Rent a ride.<br />Make the journey yours.</p>
+        </div>
+        <div>
+          <h3>Ride your way</h3>
+          <a href="fleet.html">Scooters & bikes</a
+          ><a href="pricing.html">Rental plans</a
+          ><a href="coverage-area.html">Pickup locations</a
+          ><a href="book-now.html">Book a ride</a>
+        </div>
+        <div>
+          <h3>Here to help</h3>
+          <a href="safety-deposit.html">Safety & deposit</a
+          ><a href="contact.html">Contact us</a
+          ><a href="about-us.html">About Ridey</a
+          ><a href="blog.html">Ride journal</a>
+        </div>
+        <div class="footer-note">
+          <span class="eyebrow">BEFORE YOU RIDE</span>
+          <p>
+            Bring your valid driving licence and ID. Review your rental terms,
+            deposit and kilometre allowance before booking.
+          </p>
+        </div>
+      </div>
+      <div class="wrap footer-bottom">
+        <span>© 2026 Ridey</span><a href="#top">Back to top</a>
+      </div>
+    </footer>
+    <script src="assets/js/home-redesign.js" defer></script>
+    <script src="assets/js/contact-redesign.js" defer></script>
+  </body>
+</html>

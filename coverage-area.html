@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#14b8a6" />
+    <title>Pickup Locations & Coverage | Ridey</title>
+    <meta
+      name="description"
+      content="Plan your Ridey pickup location, choose a city and review pickup and return arrangements."
+    />
+    <link rel="stylesheet" href="assets/css/home-redesign.css" />
+    <link rel="stylesheet" href="assets/css/coverage-redesign.css" />
+    <script>
+      try {
+        document.documentElement.dataset.theme =
+          localStorage.getItem("ridey-theme") === "dark" ? "dark" : "light";
+        document.documentElement.dir =
+          localStorage.getItem("ridey-direction") || "ltr";
+      } catch (e) {}
+    </script>
+  <link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg"><link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png"><link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png"><link rel="manifest" href="assets/favicon/site.webmanifest"><link rel="stylesheet" href="assets/css/qa-fixes.css" />
+</head>
+  <body id="top">
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="header">
+      <div class="header-inner">
+        <a class="brand" href="index.html" aria-label="Ridey home"
+          ><span class="brand-mark" aria-hidden="true">r</span>ridey<span
+            class="brand-period"
+            >.</span
+          ></a
+        ><button
+          class="icon-btn menu"
+          aria-label="Open navigation"
+          aria-expanded="false"
+          aria-controls="navigation"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+        <nav id="navigation" aria-label="Main navigation">
+          <details class="nav-group">
+            <summary>Home</summary>
+            <div class="drop">
+              <a href="index.html">Home 1 · Classic</a
+              ><a href="home-2.html">Home 2 · Explore</a>
+            </div>
+          </details>
+          <a href="about-us.html">About Us</a><a href="fleet.html">Fleet</a
+          ><a href="pricing.html">Plans</a>
+          <details class="nav-group">
+            <summary>Explore</summary>
+            <div class="drop">
+              <a href="about-us.html">About Ridey</a
+              ><a href="services.html">Services</a
+              ><a href="coverage-area.html">Pickup locations</a
+              ><a href="safety-deposit.html">Safety & deposit</a
+              ><a href="gallery.html">Gallery</a
+              ><a href="blog.html">Ride journal</a>
+            </div>
+          </details>
+          <a href="contact.html">Contact Us</a
+          ><a href="customer-dashboard.html">Dashboard</a>
+        <a class="nav-login" href="login.html">Log in</a></nav>
+        <div class="header-tools">
+          <button
+            class="icon-btn theme"
+            aria-label="Switch to dark mode"
+            aria-pressed="false"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20 15A8 8 0 0 1 9 4a8 8 0 1 0 11 11Z" />
+            </svg></button
+          ><button
+            class="icon-btn direction"
+            aria-label="Switch to right-to-left layout"
+            aria-pressed="false"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 8h16m-4-4 4 4-4 4M20 16H4m4-4-4 4 4 4" />
+            </svg></button
+          ><a class="btn secondary login" href="login.html">Log in</a
+          ><a class="btn primary header-book" href="book-now.html"
+            >Book a ride</a
+          >
+        </div>
+      </div>
+    </header>
+    <main id="main" class="coverage-new">
+      <section class="wrap location-intro">
+        <div class="location-intro-row">
+          <div>
+            <span class="eyebrow">START CLOSE TO YOUR PLANS</span>
+            <h1>Where your<br />journey begins.</h1>
+          </div>
+          <p>
+            Choose your city, explore pickup-area options and confirm the exact
+            meeting point before booking.
+          </p>
+        </div>
+      </section>
+      <section class="location-directory surface">
+        <div class="wrap section directory-layout">
+          <aside class="city-picker">
+            <span class="eyebrow">01 / PICK YOUR CITY</span>
+            <h2>A starting point<br />that suits you.</h2>
+            <label for="pickup-city">Your city</label
+            ><select id="pickup-city">
+              <option>Chennai</option>
+              <option>Coimbatore</option>
+              <option>Bengaluru</option>
+            </select>
+            <p>
+              These are suggested area types. Confirm the available hub, address
+              and opening hours with the rental team.
+            </p>
+            <a
+              class="btn primary"
+              id="city-enquiry"
+              href="contact.html?city=Chennai"
+              >Ask about pickup</a
+            >
+          </aside>
+          <div class="directory-content">
+            <div class="directory-photo">
+              <img
+                src="assets/images/coverage area.jpg"
+                alt="Scooters lined up at a pickup location"
+                width="1200"
+                height="800"
+                loading="lazy"
+              /><span id="city-photo-label">PLAN YOUR PICKUP IN CHENNAI</span>
+            </div>
+            <div class="directory-head">
+              <h3 id="city-heading">Explore Chennai pickup options</h3>
+              <span>3 suggested area types</span>
+            </div>
+            <div class="pickup-rows">
+              <article>
+                <span class="location-index">01</span>
+                <div>
+                  <h4>City centre</h4>
+                  <p>
+                    A convenient starting point for local errands and a day in
+                    the city.
+                  </p>
+                  <span class="location-meta"
+                    >Confirm address · hours · ride availability</span
+                  >
+                </div>
+                <a
+                  class="location-link"
+                  data-area="centre"
+                  href="contact.html?city=Chennai&area=centre"
+                  >Enquire</a
+                >
+              </article>
+              <article>
+                <span class="location-index">02</span>
+                <div>
+                  <h4>Near your commute</h4>
+                  <p>
+                    Ask for a pickup option near your work, college or regular
+                    route.
+                  </p>
+                  <span class="location-meta"
+                    >Confirm address · hours · ride availability</span
+                  >
+                </div>
+                <a
+                  class="location-link"
+                  data-area="commute"
+                  href="contact.html?city=Chennai&area=commute"
+                  >Enquire</a
+                >
+              </article>
+              <article>
+                <span class="location-index">03</span>
+                <div>
+                  <h4>Near a transit connection</h4>
+                  <p>
+                    Plan the last part of your journey from a station or other
+                    arrival point.
+                  </p>
+                  <span class="location-meta"
+                    >Confirm address · hours · ride availability</span
+                  >
+                </div>
+                <a
+                  class="location-link"
+                  data-area="transit"
+                  href="contact.html?city=Chennai&area=transit"
+                  >Enquire</a
+                >
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="wrap section location-planning">
+        <div class="planning-title">
+          <span class="eyebrow">02 / A BETTER HANDOVER</span>
+          <h2>Four details.<br />One easier pickup.</h2>
+        </div>
+        <div class="planning-grid">
+          <article>
+            <span>01</span>
+            <h3>Exact meeting point</h3>
+            <p>
+              Ask for the address and a clear landmark, then check how you will
+              reach it.
+            </p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Pickup window</h3>
+            <p>
+              Confirm the collection time and contact the team if your arrival
+              changes.
+            </p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Your chosen vehicle</h3>
+            <p>
+              Check which scooter or bike is available at that pickup point.
+            </p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Return arrangements</h3>
+            <p>
+              Agree on the return location and deadline before starting the
+              rental.
+            </p>
+          </article>
+        </div>
+      </section>
+      <section class="return-section">
+        <div class="wrap section return-layout">
+          <img
+            src="assets/images/A clear finish.jpg"
+            alt="Scooters parked together in an agreed location"
+            width="1200"
+            height="800"
+            loading="lazy"
+          />
+          <div>
+            <span class="eyebrow">03 / THINK ABOUT THE RETURN, TOO</span>
+            <h2>A clear finish<br />makes a better ride.</h2>
+            <p>
+              Pickup and return are part of the same plan. Check whether the
+              vehicle must come back to the original point, and leave enough
+              time for the handover.
+            </p>
+            <div class="return-notes">
+              <p>
+                <b>Stay within the agreed area</b><br />Confirm permitted routes
+                and outstation travel before leaving.
+              </p>
+              <p>
+                <b>Keep access clear</b><br />Use the agreed parking point and
+                avoid blocking entrances or pedestrian space.
+              </p>
+            </div>
+            <a class="btn secondary" href="safety-deposit.html"
+              >Review return guidance</a
+            >
+          </div>
+        </div>
+      </section>
+      <section class="wrap section location-questions">
+        <div>
+          <span class="eyebrow">04 / BEFORE YOU SET OFF</span>
+          <h2>Find the right<br />starting point.</h2>
+        </div>
+        <div>
+          <details>
+            <summary>Can I collect a ride near my hotel?</summary>
+            <p>
+              Ask the rental team for pickup options near your stay. Delivery
+              and collection arrangements depend on the location and booking.
+            </p>
+          </details>
+          <details>
+            <summary>Can I return at a different point?</summary>
+            <p>
+              Confirm this before booking. Do not assume another hub accepts the
+              return unless it is included in your agreed rental terms.
+            </p>
+          </details>
+          <details>
+            <summary>What if my city is not listed?</summary>
+            <p>
+              Contact the team with your city, dates and preferred vehicle to
+              check whether a suitable rental can be arranged.
+            </p>
+          </details>
+        </div>
+      </section>
+      <section class="location-closing">
+        <div class="wrap location-closing-inner">
+          <div>
+            <span class="eyebrow">YOUR LOCATION. YOUR NEXT STEP.</span>
+            <h2>Have a place in mind?</h2>
+            <p>
+              Tell us where you’d like to begin, and we’ll help you check the
+              options.
+            </p>
+          </div>
+          <a class="btn black" href="contact.html">Discuss my pickup</a>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="wrap footer-grid">
+        <div>
+          <a class="brand" href="index.html" aria-label="Ridey home"
+            ><span class="brand-mark" aria-hidden="true">r</span>ridey<span
+              class="brand-period"
+              >.</span
+            ></a
+          >
+          <p>Rent a ride.<br />Make the journey yours.</p>
+        </div>
+        <div>
+          <h3>Ride your way</h3>
+          <a href="fleet.html">Scooters & bikes</a
+          ><a href="pricing.html">Rental plans</a
+          ><a href="coverage-area.html">Pickup locations</a
+          ><a href="book-now.html">Book a ride</a>
+        </div>
+        <div>
+          <h3>Here to help</h3>
+          <a href="safety-deposit.html">Safety & deposit</a
+          ><a href="contact.html">Contact us</a
+          ><a href="about-us.html">About Ridey</a
+          ><a href="blog.html">Ride journal</a>
+        </div>
+        <div class="footer-note">
+          <span class="eyebrow">BEFORE YOU RIDE</span>
+          <p>
+            Bring your valid driving licence and ID. Review your rental terms,
+            deposit and kilometre allowance before booking.
+          </p>
+        </div>
+      </div>
+      <div class="wrap footer-bottom">
+        <span>© 2026 Ridey</span><a href="#top">Back to top</a>
+      </div>
+    </footer>
+    <script src="assets/js/home-redesign.js" defer></script>
+    <script src="assets/js/coverage-redesign.js" defer></script>
+  </body>
+</html>

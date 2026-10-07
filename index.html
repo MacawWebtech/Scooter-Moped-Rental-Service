@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Choose scooter and bike rentals for city trips, weekends and everyday commuting. Compare daily, weekly and monthly plans."
+    />
+    <meta name="theme-color" content="#14b8a6" />
+    <title>Ridey | Scooter & Bike Rentals</title>
+    <link rel="stylesheet" href="assets/css/home-redesign.css" />
+    <script>
+      try {
+        document.documentElement.dataset.theme =
+          localStorage.getItem("ridey-theme") === "dark" ? "dark" : "light";
+        document.documentElement.dir =
+          localStorage.getItem("ridey-direction") || "ltr";
+      } catch (e) {}
+    </script>
+  <link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg"><link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png"><link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png"><link rel="manifest" href="assets/favicon/site.webmanifest"><link rel="stylesheet" href="assets/css/qa-fixes.css" />
+</head>
+  <body id="top">
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="header">
+      <div class="header-inner">
+        <a class="brand" href="index.html" aria-label="Ridey home"
+          ><span class="brand-mark" aria-hidden="true">r</span>ridey<span
+            class="brand-period"
+            >.</span
+          ></a
+        ><button
+          class="icon-btn menu"
+          aria-label="Open navigation"
+          aria-expanded="false"
+          aria-controls="navigation"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+        <nav id="navigation" aria-label="Main navigation">
+          <details class="nav-group">
+            <summary>Home</summary>
+            <div class="drop">
+              <a href="index.html">Home 1 · Classic</a
+              ><a href="home-2.html">Home 2 · Explore</a>
+            </div>
+          </details>
+          <a href="about-us.html">About Us</a><a href="fleet.html">Fleet</a
+          ><a href="pricing.html">Plans</a>
+          <details class="nav-group">
+            <summary>Explore</summary>
+            <div class="drop">
+              <a href="about-us.html">About Ridey</a
+              ><a href="services.html">Services</a
+              ><a href="coverage-area.html">Pickup locations</a
+              ><a href="safety-deposit.html">Safety & deposit</a
+              ><a href="gallery.html">Gallery</a
+              ><a href="blog.html">Ride journal</a>
+            </div>
+          </details>
+          <a href="contact.html">Contact Us</a
+          ><a href="customer-dashboard.html">Dashboard</a>
+        <a class="nav-login" href="login.html">Log in</a></nav>
+        <div class="header-tools">
+          <button
+            class="icon-btn theme"
+            aria-label="Switch to dark mode"
+            aria-pressed="false"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20 15A8 8 0 0 1 9 4a8 8 0 1 0 11 11Z" />
+            </svg></button
+          ><button
+            class="icon-btn direction"
+            aria-label="Switch to right-to-left layout"
+            aria-pressed="false"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 8h16m-4-4 4 4-4 4M20 16H4m4-4-4 4 4 4" />
+            </svg></button
+          ><a class="btn secondary login" href="login.html">Log in</a
+          ><a class="btn primary header-book" href="book-now.html"
+            >Book a ride</a
+          >
+        </div>
+      </div>
+    </header>
+    <main id="main">
+      <section class="wrap hero classic">
+        <div class="hero-copy">
+          <span class="eyebrow">SCOOTER & BIKE RENTALS</span>
+          <h1>Rent a ride.<br /><span>Own your day.</span></h1>
+          <p>
+            City commutes. Weekend plans. Everyday freedom.<br />A scooter or
+            bike, for as long as you need it.
+          </p>
+          <form class="finder" action="book-now.html" method="get">
+            <label
+              >Pickup city<select name="city" required>
+                <option value="">Choose your city</option>
+                <option>Chennai</option>
+                <option>Coimbatore</option>
+                <option>Bengaluru</option>
+              </select></label
+            ><label>Pickup date<input type="date" name="date" required /></label
+            ><label
+              >Rental period<select name="plan">
+                <option value="daily">Daily</option>
+                <option value="weekly">Weekly</option>
+                <option value="monthly">Monthly</option>
+              </select></label
+            ><button class="btn primary" type="submit">Find my ride</button>
+          </form>
+          <p class="form-note">
+            Select your preferences to continue to booking. Availability is
+            confirmed at pickup.
+          </p>
+        </div>
+        <div class="hero-photo">
+          <img
+            class=""
+            src="assets/images/home-hero.jpg"
+            alt="Real scooters ready for a city ride"
+            fetchpriority="high"
+            width="1200"
+            height="800"
+          />
+          <div class="photo-caption">
+            <span>YOUR CITY, ON TWO WHEELS</span
+            ><b>Less waiting.<br />More going.</b>
+          </div>
+        </div>
+      </section>
+      <div class="wrap promise-strip">
+        <span>Scooters & bikes</span><span>Daily · Weekly · Monthly</span
+        ><a href="safety-deposit.html">Clear rental terms</a>
+      </div>
+      <section class="wrap section">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">01 / CHOOSE YOUR RIDE</span>
+            <h2>Two wheels. Plenty of possibilities.</h2>
+            <p>Start with where you want to go.</p>
+          </div>
+        </div>
+        <div class="grid three categories">
+          <a class="category" href="#rides" data-select="scooters"
+            ><img
+              class=""
+              src="assets/images/g-2.jpg"
+              alt="City scooters"
+              loading="lazy"
+              width="1200"
+              height="800"
+            />
+            <div>
+              <h3>City scooters</h3>
+              <p>Easy errands. Everyday commutes.</p>
+              <span class="text-link">Explore rides</span>
+            </div></a
+          ><a class="category" href="#rides" data-select="bikes"
+            ><img
+              class=""
+              src="assets/images/bike-collection.jpg"
+              alt="Bikes"
+              loading="lazy"
+              width="1200"
+              height="800"
+            />
+            <div>
+              <h3>Bikes</h3>
+              <p>A different pace for a longer route.</p>
+              <span class="text-link">Explore rides</span>
+            </div></a
+          ><a class="category" href="#rides" data-select="weekend"
+            ><img
+              class=""
+              src="assets/images/city-rider.jpg"
+              alt="Weekend rides"
+              loading="lazy"
+              width="1200"
+              height="800"
+            />
+            <div>
+              <h3>Weekend rides</h3>
+              <p>More stops. More of the city.</p>
+              <span class="text-link">Explore rides</span>
+            </div></a
+          >
+        </div>
+      </section>
+      <section id="rides" class="surface">
+        <div class="wrap section">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">02 / THE RIDE LINEUP</span>
+              <h2>Find your kind of ride.</h2>
+              <p>
+                Scooters for city days. Bikes for routes beyond your routine.
+              </p>
+            </div>
+            <a class="text-link" href="fleet.html">View the full fleet</a>
+          </div>
+          <div class="filters" role="group" aria-label="Filter ride categories">
+            <button aria-pressed="true" data-filter="all">All rides</button
+            ><button aria-pressed="false" data-filter="scooters">
+              Scooters</button
+            ><button aria-pressed="false" data-filter="bikes">Bikes</button
+            ><button aria-pressed="false" data-filter="weekend">
+              Weekend picks
+            </button>
+          </div>
+          <div class="grid three ride-grid">
+            <article
+              class="ride-card"
+              data-category="scooters"
+              data-weekend="false"
+            >
+              <div class="ride-image">
+                <img
+                  class=""
+                  src="assets/images/scooter-collection.jpg"
+                  alt="City Classic"
+                  loading="lazy"
+                  width="1200"
+                  height="800"
+                /><span class="badge">City favourite</span>
+              </div>
+              <div class="ride-info">
+                <span class="eyebrow">City & short trips</span>
+                <h3>City Classic</h3>
+                <p>Automatic · petrol</p>
+                <div class="ride-bottom">
+                  <div><strong>₹499</strong><span> / day</span></div>
+                  <a
+                    class="btn secondary"
+                    href="book-now.html?ride=City+Classic"
+                    >Choose ride</a
+                  >
+                </div>
+              </div>
+            </article>
+            <article
+              class="ride-card"
+              data-category="scooters"
+              data-weekend="false"
+            >
+              <div class="ride-image">
+                <img
+                  class=""
+                  src="assets/images/city-scooters.jpg"
+                  alt="Urban Comfort"
+                  loading="lazy"
+                  width="1200"
+                  height="800"
+                /><span class="badge">Daily companion</span>
+              </div>
+              <div class="ride-info">
+                <span class="eyebrow">Everyday commuting</span>
+                <h3>Urban Comfort</h3>
+                <p>Automatic · petrol</p>
+                <div class="ride-bottom">
+                  <div><strong>₹549</strong><span> / day</span></div>
+                  <a
+                    class="btn secondary"
+                    href="book-now.html?ride=Urban+Comfort"
+                    >Choose ride</a
+                  >
+                </div>
+              </div>
+            </article>
+            <article
+              class="ride-card"
+              data-category="bikes"
+              data-weekend="true"
+            >
+              <div class="ride-image">
+                <img
+                  class=""
+                  src="assets/images/blog4.jpg"
+                  alt="Weekend Bike"
+                  loading="lazy"
+                  width="1200"
+                  height="800"
+                /><span class="badge">Explore further</span>
+              </div>
+              <div class="ride-info">
+                <span class="eyebrow">Weekend & longer routes</span>
+                <h3>Weekend Bike</h3>
+                <p>Manual · petrol</p>
+                <div class="ride-bottom">
+                  <div><strong>Enquire</strong><span> for rates</span></div>
+                  <a
+                    class="btn secondary"
+                    href="book-now.html?ride=Weekend+Bike"
+                    >Choose ride</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+          <p class="form-note">
+            Illustrative ride categories and starting prices. Final model,
+            availability and rental terms are confirmed before pickup.
+          </p>
+        </div>
+      </section>
+      <section id="plans" class="wrap section">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">03 / YOUR RIDE. YOUR SCHEDULE.</span>
+            <h2>A day, a week, or every day.</h2>
+            <p>Choose a rental period that matches your routine.</p>
+          </div>
+        </div>
+        <div class="grid three plans">
+          <article class="plan">
+            <span class="eyebrow">Daily flexibility</span>
+            <h3>Daily</h3>
+            <p>A day out or a quick city visit.</p>
+            <div class="price">₹499<span>/ day</span></div>
+            <a class="btn secondary" href="book-now.html?plan=daily"
+              >Choose daily</a
+            ><a class="plan-details" href="pricing.html"
+              >View terms & deposit</a
+            >
+          </article>
+          <article class="plan featured">
+            <span class="eyebrow">Popular plan</span>
+            <h3>Weekly</h3>
+            <p>A busy week with a ride of your own.</p>
+            <div class="price">₹2,499<span>/ week</span></div>
+            <a class="btn primary" href="book-now.html?plan=weekly"
+              >Choose weekly</a
+            ><a class="plan-details" href="pricing.html"
+              >View terms & deposit</a
+            >
+          </article>
+          <article class="plan">
+            <span class="eyebrow">Long-term convenience</span>
+            <h3>Monthly</h3>
+            <p>Your everyday commute, sorted.</p>
+            <div class="price">₹6,999<span>/ month</span></div>
+            <a class="btn secondary" href="book-now.html?plan=monthly"
+              >Choose monthly</a
+            ><a class="plan-details" href="pricing.html"
+              >View terms & deposit</a
+            >
+          </article>
+        </div>
+        <p class="form-note">
+          Starting template rates. Fuel, kilometre allowance and refundable
+          deposit depend on the selected ride.
+        </p>
+      </section>
+      <section class="surface">
+        <div class="wrap section split how">
+          <img
+            class=""
+            src="assets/images/rental-hub.jpg"
+            alt="Real scooters and bikes lined up at a rental pickup point"
+            loading="lazy"
+            width="1200"
+            height="800"
+          />
+          <div>
+            <div class="section-heading">
+              <div>
+                <span class="eyebrow">04 / A SIMPLE START</span>
+                <h2>Choose. Collect. Explore.</h2>
+              </div>
+            </div>
+            <ol class="steps">
+              <li>
+                <span>01</span>
+                <div>
+                  <h3>Pick your wheels</h3>
+                  <p>Choose a scooter or bike and your rental dates.</p>
+                </div>
+              </li>
+              <li>
+                <span>02</span>
+                <div>
+                  <h3>Get ready to ride</h3>
+                  <p>Confirm your licence, ID, deposit and pickup details.</p>
+                </div>
+              </li>
+              <li>
+                <span>03</span>
+                <div>
+                  <h3>Make it your journey</h3>
+                  <p>Collect your ride and return it at the agreed time.</p>
+                </div>
+              </li>
+            </ol>
+            <a class="btn secondary" href="safety-deposit.html"
+              >Before you ride</a
+            >
+          </div>
+        </div>
+      </section>
+      <section class="wrap section faq">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">GOOD TO KNOW</span>
+            <h2>A little clarity before you go.</h2>
+          </div>
+        </div>
+        <div>
+          <details>
+            <summary>Scooter or bike: which should I choose?</summary>
+            <p>
+              Choose an automatic scooter for short city journeys. For longer
+              routes, consider a bike suited to your licence, riding experience
+              and route. Confirm outstation permission before booking.
+            </p>
+          </details>
+          <details>
+            <summary>Should I choose a weekly or monthly plan?</summary>
+            <p>
+              Weekly suits a short stay or a busy work week. Monthly suits
+              regular commuting. Compare the total rental, included kilometres
+              and deposit on the pricing page.
+            </p>
+          </details>
+          <details>
+            <summary>What do I need at pickup?</summary>
+            <p>
+              Bring a valid driving licence and the identification requested in
+              your booking. Confirm helmet availability and inspect your ride
+              before leaving.
+            </p>
+          </details>
+          <details>
+            <summary>Can I take my rental outside the city?</summary>
+            <p>
+              Check permitted areas, kilometre limits and return requirements
+              with the rental team before planning an outstation trip.
+            </p>
+          </details>
+        </div>
+      </section>
+      <section class="cta">
+        <div class="wrap cta-inner">
+          <div>
+            <span class="eyebrow">RENT · RIDE · EXPLORE</span>
+            <h2>Your next journey<br />starts with a choice.</h2>
+          </div>
+          <div>
+            <p>
+              City streets or a weekend detour.<br />Find the wheels that fit
+              your plans.
+            </p>
+            <a class="btn black" href="book-now.html">Find my ride</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="wrap footer-grid">
+        <div>
+          <a class="brand" href="index.html" aria-label="Ridey home"
+            ><span class="brand-mark" aria-hidden="true">r</span>ridey<span
+              class="brand-period"
+              >.</span
+            ></a
+          >
+          <p>Rent a ride.<br />Make the journey yours.</p>
+        </div>
+        <div>
+          <h3>Ride your way</h3>
+          <a href="fleet.html">Scooters & bikes</a
+          ><a href="pricing.html">Rental plans</a
+          ><a href="coverage-area.html">Pickup locations</a
+          ><a href="book-now.html">Book a ride</a>
+        </div>
+        <div>
+          <h3>Here to help</h3>
+          <a href="safety-deposit.html">Safety & deposit</a
+          ><a href="contact.html">Contact us</a
+          ><a href="about-us.html">About Ridey</a
+          ><a href="blog.html">Ride journal</a>
+        </div>
+        <div class="footer-note">
+          <span class="eyebrow">BEFORE YOU RIDE</span>
+          <p>
+            Bring your valid driving licence and ID. Review your rental terms,
+            deposit and kilometre allowance before booking.
+          </p>
+        </div>
+      </div>
+      <div class="wrap footer-bottom">
+        <span>© 2026 Ridey</span><a href="#top">Back to top</a>
+      </div>
+    </footer>
+    <script src="assets/js/home-redesign.js" defer></script>
+  </body>
+</html>
+

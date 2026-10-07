@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <title>Admin Dashboard | Ridey</title>
+    <meta
+      content="Ridey fleet and booking administration dashboard."
+      name="description"
+    />
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="assets/css/remaining.css" rel="stylesheet" />
+    <link href="assets/css/theme.css" rel="stylesheet" />
+    <meta content="#14b8a6" name="theme-color" />
+    <link href="assets/css/home-redesign.css" rel="stylesheet" />
+    <link href="assets/css/final-pages-redesign.css" rel="stylesheet" />
+    <script>
+      try {
+        document.documentElement.dataset.theme =
+          localStorage.getItem("ridey-theme") === "dark" ? "dark" : "light";
+        document.documentElement.dir =
+          localStorage.getItem("ridey-direction") || "ltr";
+      } catch (e) {}
+    </script>
+  <link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg"><link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png"><link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png"><link rel="manifest" href="assets/favicon/site.webmanifest"><link rel="stylesheet" href="assets/css/qa-fixes.css" />
+</head>
+  <body class="dashboard-page admin-page" id="top">
+    <header class="header">
+      <div class="header-inner">
+        <a aria-label="Ridey home" class="brand" href="index.html"
+          ><span aria-hidden="true" class="brand-mark">r</span>ridey<span
+            class="brand-period"
+            >.</span
+          ></a
+        ><button
+          aria-controls="navigation"
+          aria-expanded="false"
+          aria-label="Open navigation"
+          class="icon-btn menu"
+        >
+          <svg aria-hidden="true" viewbox="0 0 24 24">
+            <path d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+        <nav aria-label="Main navigation" id="navigation">
+          <details class="nav-group">
+            <summary>Home</summary>
+            <div class="drop">
+              <a href="index.html">Home 1 · Classic</a
+              ><a href="home-2.html">Home 2 · Explore</a>
+            </div>
+          </details>
+          <a href="about-us.html">About Us</a><a href="fleet.html">Fleet</a
+          ><a href="pricing.html">Plans</a>
+          <details class="nav-group">
+            <summary>Explore</summary>
+            <div class="drop">
+              <a href="about-us.html">About Ridey</a
+              ><a href="services.html">Services</a
+              ><a href="coverage-area.html">Pickup locations</a
+              ><a href="safety-deposit.html">Safety &amp; deposit</a
+              ><a href="gallery.html">Gallery</a
+              ><a href="blog.html">Ride journal</a>
+            </div>
+          </details>
+          <a href="contact.html">Contact Us</a
+          ><a href="customer-dashboard.html">Dashboard</a>
+        <a class="nav-login" href="login.html">Log in</a></nav>
+        <div class="header-tools">
+          <button
+            aria-label="Switch to dark mode"
+            aria-pressed="false"
+            class="icon-btn theme"
+          >
+            <svg aria-hidden="true" viewbox="0 0 24 24">
+              <path d="M20 15A8 8 0 0 1 9 4a8 8 0 1 0 11 11Z"></path>
+            </svg></button
+          ><button
+            aria-label="Switch to right-to-left layout"
+            aria-pressed="false"
+            class="icon-btn direction"
+          >
+            <svg aria-hidden="true" viewbox="0 0 24 24">
+              <path d="M4 8h16m-4-4 4 4-4 4M20 16H4m4-4-4 4 4 4"></path>
+            </svg></button
+          ><a class="btn secondary login" href="login.html">Log in</a
+          ><a class="btn primary header-book" href="book-now.html"
+            >Book a ride</a
+          >
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="dash-shell">
+        <aside>
+          <b>RIDEY / OPS</b>
+          <nav aria-label="Admin dashboard" class="dash-nav">
+            <a class="active" href="#overview">Overview</a
+            ><a href="#customers">Customers</a><a href="#fleet-admin">Fleet</a
+            ><a href="#availability">Availability</a
+            ><a href="#bookings">Bookings</a
+            ><a href="#active-admin">Active Rentals</a
+            ><a href="#returns">Returns</a><a href="#deposits">Deposits</a
+            ><a href="#payments">Payments</a><a href="#messages">Messages</a
+            ><a href="#notifications-admin">Notifications</a
+            ><a href="#analytics">Analytics</a
+            ><a href="#settings-admin">Settings</a>
+          </nav>
+          <a href="login.html">Logout →</a>
+        </aside>
+        <div class="dash-main" id="overview">
+          <header>
+            <span>OPERATIONS / LIVE</span>
+            <h1>City pulse.</h1>
+          </header>
+          <section class="ops-gauges dash-reveal" id="availability">
+            <div>
+              <b>42</b><span>Active rentals</span><i style="--v: 72%"></i>
+            </div>
+            <div><b>18</b><span>Available</span><i style="--v: 44%"></i></div>
+            <div>
+              <b>7</b><span>Returns today</span><i style="--v: 31%"></i>
+            </div>
+            <div><b>₹48K</b><span>Revenue</span><i style="--v: 81%"></i></div>
+          </section>
+          <section class="fleet-line dash-reveal" id="fleet-admin">
+            <span>FLEET / LIVE STATUS</span>
+            <p>R1-014 <b>ON RIDE</b> Central / 68% battery</p>
+            <p>S2-009 <b>AVAILABLE</b> Tech Park / 91% battery</p>
+            <p>M3-021 <b>SERVICE</b> Workshop / inspection</p>
+          </section>
+          <section class="analytics-road dash-reveal" id="analytics">
+            <span>PEAK HOURS</span>
+            <div class="bars">
+              <i style="height: 30%"></i><i style="height: 55%"></i
+              ><i style="height: 90%"></i><i style="height: 72%"></i
+              ><i style="height: 48%"></i><i style="height: 82%"></i>
+            </div>
+            <small
+              ><span>06</span><span>09</span><span>12</span><span>15</span
+              ><span>18</span><span>21</span></small
+            >
+          </section>
+          <section class="ops-route dash-reveal" id="bookings">
+            <span>POPULAR LOCATIONS</span>
+            <div>
+              <b>Central</b><i></i><b>Tech Park</b><i></i><b>Riverside</b>
+            </div>
+          </section>
+          <section class="admin-actions dash-reveal" id="customers">
+            <span>CUSTOMERS</span>
+            <h2>Customer operations.</h2>
+            <button data-demo-action="Customer list refreshed" type="button">
+              Refresh customers →
+            </button>
+          </section>
+          <section class="admin-actions dash-reveal" id="active-admin">
+            <span>ACTIVE RENTALS</span>
+            <h2>42 rides are live.</h2>
+            <button
+              data-demo-action="Active rental monitor opened"
+              type="button"
+            >
+              Open live monitor →
+            </button>
+          </section>
+          <section class="admin-actions dash-reveal" id="returns">
+            <span id="deposits">RETURNS / DEPOSITS</span>
+            <h2>Returns stay on schedule.</h2>
+            <button data-demo-action="Return queue refreshed" type="button">
+              Check return queue →
+            </button>
+          </section>
+          <section class="admin-actions dash-reveal" id="payments">
+            <span>PAYMENTS</span>
+            <h2>Revenue pulse.</h2>
+            <button data-demo-action="Payment report prepared" type="button">
+              Prepare report →
+            </button>
+          </section>
+          <section class="admin-actions dash-reveal" id="messages">
+            <span id="notifications-admin">MESSAGES</span>
+            <h2>Support inbox.</h2>
+            <button data-demo-action="Message inbox opened" type="button">
+              Open inbox →
+            </button>
+          </section>
+          <section class="admin-actions dash-reveal" id="settings-admin">
+            <span>SETTINGS</span>
+            <h2>Operations controls.</h2>
+            <button data-demo-action="Admin settings saved" type="button">
+              Save settings →
+            </button>
+          </section>
+          <div aria-live="polite" class="dash-toast" id="dashToast"></div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="wrap footer-grid">
+        <div>
+          <a aria-label="Ridey home" class="brand" href="index.html"
+            ><span aria-hidden="true" class="brand-mark">r</span>ridey<span
+              class="brand-period"
+              >.</span
+            ></a
+          >
+          <p>Rent a ride.<br />Make the journey yours.</p>
+        </div>
+        <div>
+          <h3>Ride your way</h3>
+          <a href="fleet.html">Scooters &amp; bikes</a
+          ><a href="pricing.html">Rental plans</a
+          ><a href="coverage-area.html">Pickup locations</a
+          ><a href="book-now.html">Book a ride</a>
+        </div>
+        <div>
+          <h3>Here to help</h3>
+          <a href="safety-deposit.html">Safety &amp; deposit</a
+          ><a href="contact.html">Contact us</a
+          ><a href="about-us.html">About Ridey</a
+          ><a href="blog.html">Ride journal</a>
+        </div>
+        <div class="footer-note">
+          <span class="eyebrow">BEFORE YOU RIDE</span>
+          <p>
+            Bring your valid driving licence and ID. Review your rental terms,
+            deposit and kilometre allowance before booking.
+          </p>
+        </div>
+      </div>
+      <div class="wrap footer-bottom">
+        <span>© 2026 Ridey</span><a href="#top">Back to top</a>
+      </div>
+    </footer>
+    <script src="assets/js/remaining.js"></script>
+    <script defer="" src="assets/js/home-redesign.js"></script>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+/* ==========================================================================
+   Ridey – QA fixes (loaded last on every page)
+   ========================================================================== */
+
+/* 1. Header dropdown – vertically centred chevron, aligned with sibling links */
+.header-inner nav{align-items:center}
+.header-inner nav>a,.header-inner nav .nav-group>summary{line-height:1.2}
+.nav-group summary{display:inline-flex;align-items:center;gap:8px;padding:10px 0}
+.nav-group summary::after{content:'';flex:none;margin:0;width:6px;height:6px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:translateY(-2px) rotate(45deg);transition:transform .2s ease}
+.nav-group[open]>summary::after{transform:translateY(2px) rotate(-135deg)}
+.drop{top:calc(100% + 6px)}
+.drop a{border-radius:6px}
+.drop a:hover{background:var(--surface);text-decoration:none}
+
+/* 2 & 4. Active state for header, dropdown and footer links */
+.header-inner nav>a.is-active,.header-inner nav .nav-group>summary.is-active{color:var(--fg);text-decoration:underline;text-decoration-color:var(--primary);text-decoration-thickness:3px;text-underline-offset:9px}
+.drop a.is-active{background:color-mix(in srgb,var(--primary) 16%,transparent);box-shadow:inset 3px 0 0 var(--primary);text-decoration:none}
+[dir=rtl] .drop a.is-active{box-shadow:inset -3px 0 0 var(--primary)}
+.header-tools .header-book.is-active{box-shadow:0 0 0 2px var(--bg),0 0 0 4px var(--primary)}
+.footer-grid>div>a.is-active{color:#fff;text-decoration:underline;text-decoration-color:var(--primary);text-decoration-thickness:2px;text-underline-offset:5px}
+
+/* 2. Pre-footer secondary links become real CTA buttons */
+.btn.cta-outline{background:transparent;color:#111;border:1.5px solid #111;text-decoration:none;white-space:nowrap}
+.btn.cta-outline:hover,.btn.cta-outline:focus-visible{background:#111;color:#fff;border-color:#111;text-decoration:none}
+
+/* 5. Contact page – second CTA keeps contrast on hover */
+.contact-cta-inner>div:last-child>p{margin-bottom:20px}
+.contact-cta .secondary:hover,.contact-cta .secondary:focus-visible{background:#111;color:#fff;border-color:#111}
+
+/* 7. Typography – headings 600, paragraphs 400–550 */
+h1,h2,h3,h4,h5,h6,:is(h1,h2,h3,h4,h5,h6) :is(span,em,strong,b){font-weight:600!important}
+p{font-weight:400}
+p.recovery-status,p.form-message,p.dash-feedback{font-weight:500!important}
+
+/* Mobile-only Log in link inside the menu panel */
+.header-inner nav>.nav-login{display:none}
+
+/* Responsive – Book a ride stays visible on tablet & phone */
+@media(max-width:1100px){
+  .header-inner nav>a.is-active,.header-inner nav .nav-group>summary.is-active{text-decoration:none;background:color-mix(in srgb,var(--primary) 16%,transparent);border-radius:8px;padding-inline:12px}
+  .header-inner nav>a,.header-inner nav .nav-group>summary{padding-block:10px}
+}
+@media(max-width:700px){
+  .header-inner{column-gap:8px}
+  .header-tools{gap:6px}
+  .header-tools .header-book{display:inline-flex;min-height:38px;padding:8px 12px;font-size:.8rem;white-space:nowrap}
+  .header-inner nav>a[href="customer-dashboard.html"]{grid-column:1/-1;justify-self:center;min-width:50%}
+  .header-inner nav>a.nav-login{display:flex;grid-column:1/-1;justify-self:stretch;border:1px solid var(--fg);border-radius:7px;font-weight:700;margin-top:4px}
+  .header-inner nav>a.nav-login.is-active{border-color:var(--primary)}
+}
+@media(max-width:400px){
+  .header-inner{padding-inline:14px}
+  .header-inner .brand{font-size:1.65rem;gap:6px}
+  .header-inner .brand-mark{width:28px;height:28px}
+  .header-tools{gap:5px}
+  .header-tools .icon-btn{width:36px;height:36px}
+  .header-tools .header-book{padding-inline:10px}
+}
+@media(max-width:350px){
+  .header-inner{padding-inline:10px;column-gap:6px}
+  .header-inner .brand{font-size:1.4rem}
+  .header-inner .brand-mark{width:24px;height:24px}
+  .header-tools{gap:4px}
+  .header-tools .icon-btn{width:34px;height:34px}
+  .header-tools .header-book{padding-inline:8px;font-size:.75rem}
+}
+
+/* 6 & 8. Focused authentication layout – no site header/footer */
+.auth-bar{max-width:1440px;margin:auto;padding:22px 40px 0;background:var(--surface);box-shadow:0 0 0 100vmax var(--surface);clip-path:inset(0 -100vmax);display:flex;align-items:center;justify-content:space-between;gap:16px}
+.auth-bar-tools{display:flex;align-items:center;gap:8px}
+.auth-back{font-size:.875rem;font-weight:600;text-decoration:underline;text-underline-offset:5px;margin-inline-end:8px}
+.auth-page main>section:first-child{padding-top:28px}
+.auth-page .login-story-copy{justify-content:flex-end}
+@media(max-width:700px){.auth-bar{padding:16px 18px 0}.auth-back{display:none}}
+
+.auth-divider{display:flex;align-items:center;gap:14px;margin:22px 0 16px;font-size:.8rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.auth-divider::before,.auth-divider::after{content:'';flex:1;height:1px;background:var(--line)}
+.social-auth{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.social-btn{min-height:50px;display:flex;align-items:center;justify-content:center;gap:10px;padding:12px 16px;border:1px solid var(--line);border-radius:7px;background:var(--card,var(--bg));color:var(--fg);font-weight:600;font-size:.92rem;text-decoration:none;transition:border-color .18s,background-color .18s}
+.social-btn:hover{border-color:var(--fg);background:var(--surface)}
+.social-btn svg{width:20px;height:20px;flex:none}
+.social-btn.apple svg{fill:currentColor}
+@media(max-width:520px){.social-auth{grid-template-columns:1fr}}
